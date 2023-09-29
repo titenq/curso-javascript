@@ -1,0 +1,60 @@
+/* .container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sintax_highlighter {
+  border: 3px solid #424242;
+  border-radius: 10px;
+  width: 80%;
+}
+
+.button_container {
+  position: absolute;
+  top: 0px;
+  right: 50px;
+}
+
+.button_copy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  background-color: #fafafa;
+  cursor: pointer;
+  border-top-right-radius: 7px;
+}
+ */
+
+ .container {
+  display: flex; /* Use um layout flexível */
+  justify-content: center; /* Coloca os elementos o mais longe possível um do outro na linha */
+  align-items: center;
+  padding: 20px;
+}
+
+.sintax_highlighter {
+  flex: 1; /* Expande para ocupar todo o espaço disponível */
+  border: 3px solid #424242;
+  border-radius: 10px;
+}
+
+.button_container {
+  margin-top: 17px;
+  margin-left: -27px; /* Adiciona um espaçamento à esquerda */
+  align-self: flex-start; /* Alinha o elemento na parte superior */
+}
+
+.button_copy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  background-color: #fafafa;
+  cursor: pointer;
+  border-top-right-radius: 7px;
+}
