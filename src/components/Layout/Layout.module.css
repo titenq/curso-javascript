@@ -1,0 +1,15 @@
+.layout {
+  display: flex;
+  height: calc(100vh - 60px);
+}
+
+.sidebar {
+  flex: 0 0 auto;
+  overflow-y: auto;
+  background-color: #37474f;
+}
+
+.content {
+  overflow-y: auto;
+  width: 100%;
+}

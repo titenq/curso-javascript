@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh - 60px);
+}
+
+.logo {
+  width: 256px;
+  height: 256px;
+  animation: scaleUp 1s ease;
+  transform-origin: center;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: -15px;
+  animation: scaleUp 1s ease;
+  transform-origin: 100px -100px;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
