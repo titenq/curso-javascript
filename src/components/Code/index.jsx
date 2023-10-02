@@ -5,6 +5,8 @@ import { monokaiSublime } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { ToastContainer, Zoom, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import { FaCopy } from 'react-icons/fa';
+
 import styles from './Code.module.css';
 
 const Code = props => {
@@ -27,23 +29,26 @@ const Code = props => {
   return (
     <>
       <div className={styles.container}>
-        <SyntaxHighlighter
-          className={styles.sintax_highlighter}
-          language="javascript"
-          style={monokaiSublime}
-          showLineNumbers
-        >
-          {props.codeString}
-        </SyntaxHighlighter>
+        <div className={styles.buttons_container}>
+          <div className={styles.button_red}></div>
+          <div className={styles.button_yellow}></div>
+          <div className={styles.button_green}></div>
+        </div>
 
-        <div className={styles.button_container}>
-          <div onClick={() => copy(codeStringRef)} className={styles.button_copy}>
-            <img 
-              src="/img/copy.png" 
-              alt="copiar" 
-              width={20} 
-              height={20} 
-            />
+        <div className={styles.code_container}>
+          <SyntaxHighlighter
+            className={styles.sintax_highlighter}
+            language="javascript"
+            style={monokaiSublime}
+            showLineNumbers
+          >
+            {props.codeString}
+          </SyntaxHighlighter>
+
+          <div className={styles.button_container}>
+            <div onClick={() => copy(codeStringRef)} className={styles.button_copy}>
+              <FaCopy />
+            </div>
           </div>
         </div>
       </div>

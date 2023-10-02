@@ -48,20 +48,3 @@
   transform: rotate(0);
   transition: all 0.5s;
 }
-
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(#37474f, #263238);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(#263238, #37474f);
-}
-
-::-webkit-scrollbar-track {
-  background: #263238;
-  box-shadow: inset 0 0 5px #ede7f6;
-}

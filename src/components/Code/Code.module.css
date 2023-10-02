@@ -1,51 +1,56 @@
-/* .container {
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
   position: relative;
+}
+
+.code_container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
 }
 
 .sintax_highlighter {
+  min-width: 500px;
   border: 3px solid #424242;
   border-radius: 10px;
-  width: 80%;
+  border-top: 30px solid #424242;
 }
 
-.button_container {
+.buttons_container {
+  display: flex;
+  gap: 8px;
   position: absolute;
-  top: 0px;
-  right: 50px;
+  top: 18px;
+  left: 30px;
 }
 
-.button_copy {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 25px;
-  height: 25px;
-  background-color: #fafafa;
-  cursor: pointer;
-  border-top-right-radius: 7px;
-}
- */
-
- .container {
-  display: flex; /* Use um layout flexível */
-  justify-content: center; /* Coloca os elementos o mais longe possível um do outro na linha */
-  align-items: center;
-  padding: 20px;
+.button_red {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #d50000;
 }
 
-.sintax_highlighter {
-  flex: 1; /* Expande para ocupar todo o espaço disponível */
-  border: 3px solid #424242;
-  border-radius: 10px;
+.button_yellow {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ffff00;
+}
+
+.button_green {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #2e7d32;
 }
 
 .button_container {
-  margin-top: 17px;
-  margin-left: -27px; /* Adiciona um espaçamento à esquerda */
-  align-self: flex-start; /* Alinha o elemento na parte superior */
+  margin: 3px 0  0 -29px;
+  align-self: flex-start;
 }
 
 .button_copy {
@@ -54,7 +59,7 @@
   align-items: center;
   width: 25px;
   height: 25px;
-  background-color: #fafafa;
+  background-color: #424242;
   cursor: pointer;
   border-top-right-radius: 7px;
 }
