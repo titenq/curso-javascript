@@ -1,7 +1,7 @@
 .navbar {
   background-color: #6a1b9a;
   height: 60px;
-  z-index: 1000;
+  z-index: 2000;
 }
 
 .logo_header {

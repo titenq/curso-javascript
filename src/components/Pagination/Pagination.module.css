@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 700px;
+  margin-top: 30px;
+}
+
+.button_page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 150px;
+  min-height: 50px;
+  background-color: #35474f;
+}
+
+.button_page:disabled {
+  background-color: transparent;
+}
+
+.topic {
+  font-size: 16px;
+  margin: 0;
+}
+
+.transparent {
+  display: hidden;
+}
