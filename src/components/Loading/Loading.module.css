@@ -3,12 +3,13 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 3.125rem;
+  margin-top: 3.75rem;
 }
 
 .spinner {
   width: 8rem;
   height: 8rem;
+  border-width: 0.4rem;
 }
 
 .loading {
