@@ -1,19 +1,11 @@
 import { Link } from 'react-router-dom';
 
-import { Container } from 'react-bootstrap';
-
 import styles from '../Topics.module.css';
-import Pagination from '../../../components/Pagination';
-import topics from '../../../helpers/topics';
-import useTopicPagination from '../../../hooks/useTopicPagination';
+import CustomTopic from '../CustomTopic';
 
 const Introducao = () => {
-  const { topicPrevious, topicNext } = useTopicPagination(topics);
-
-  return (
-    <Container className={styles.container}>
-      <h1 className={styles.title}>Introdução</h1>
-
+  const content = (
+    <>
       <p className={styles.p_container}>
         Nesse pequeno tutorial eu vou tentar passar alguns conhecimentos básicos sobre a linguagem de programação Javascript.
       </p>
@@ -37,16 +29,15 @@ const Introducao = () => {
           <span className="fst-italic text-decoration-underline">CSS</span>
         </Link>.
       </p>
-      
+
       <p className={styles.p_container}>
         Bons estudos!
       </p>
-      
-      <Pagination
-        topicPrevious={topicPrevious}
-        topicNext={topicNext}
-      />
-    </Container>
+    </>
+  );
+
+  return (
+    <CustomTopic content={content} />
   );
 };
 

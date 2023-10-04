@@ -1,21 +1,13 @@
-import { Container } from 'react-bootstrap';
-
 import styles from '../Topics.module.css';
 import Code from '../../../components/Code';
-import topics from '../../../helpers/topics';
-import useTopicPagination from '../../../hooks/useTopicPagination';
-import Pagination from '../../../components/Pagination';
 import helloWorld from '../../../helpers/code/helloWorld';
 import helloWorldC from '../../../helpers/code/helloWorldC';
 import helloWorldJava from '../../../helpers/code/helloWorldJava';
+import CustomTopic from '../CustomTopic';
 
 const HelloWorld = () => {
-  const { topicPrevious, topicNext } = useTopicPagination(topics);
-
-  return (
-    <Container className={styles.container}>
-      <h1 className={styles.title}>Hello World</h1>
-
+  const content = (
+    <>
       <p className={styles.p_container}>
         O <span className="fst-italic">Hello World</span> é uma tradição em linguagens de programação onde é executado o programa mais simples possível nessa linguagem, sendo exibido a mensagem <span className="fst-italic">Hello World</span>.
       </p>
@@ -53,12 +45,11 @@ const HelloWorld = () => {
       </p>
 
       <Code codeString={helloWorld}  />
+    </>
+  );
 
-      <Pagination
-        topicPrevious={topicPrevious}
-        topicNext={topicNext}
-      />
-    </Container>
+  return (
+    <CustomTopic content={content} />
   );
 };
 

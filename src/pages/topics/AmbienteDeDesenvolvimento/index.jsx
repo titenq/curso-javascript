@@ -1,11 +1,8 @@
 import { Link } from 'react-router-dom';
 
-import { Container, Image } from 'react-bootstrap';
+import { Image } from 'react-bootstrap';
 
 import styles from '../Topics.module.css';
-import useTopicPagination from '../../../hooks/useTopicPagination';
-import topics from '../../../helpers/topics';
-import Pagination from '../../../components/Pagination';
 import chrome from '../../../assets/img/baixar-chrome.png';
 import vscode from '../../../assets/img/baixar-vscode.png';
 import vscode1 from '../../../assets/img/baixar-vscode1.png';
@@ -15,14 +12,11 @@ import vscodeConfig from '../../../assets/img/vscode-config.png';
 import vscodeExtension from '../../../assets/img/vscode-extensao.png';
 import vscodeCodeRunner from '../../../assets/img/vscode-code-runner.png';
 import vscodeLiveServer from '../../../assets/img/vscode-live-server.png';
+import CustomTopic from '../CustomTopic';
 
 const AmbienteDeDesenvolvimento = () => {
-  const { topicPrevious, topicNext } = useTopicPagination(topics);
-
-  return (
-    <Container className={styles.container}>
-      <h1 className={styles.title}>Ambiente de Desenvolvimento</h1>
-
+  const content = (
+    <>
       <p className={styles.p_container}>
         Ambiente de desenvolvimento <span className="fst-italic">(development environment)</span> é o conjunto de ferramentas, recursos e configurações que um programador utiliza para escrever e testar o código JavaScript de maneira eficaz.
       </p>
@@ -149,12 +143,11 @@ const AmbienteDeDesenvolvimento = () => {
       <p className={styles.p_container}>
         Nos próximos tópicos explicaremos as funcionalidades das extensões instaladas.
       </p>
+    </>
+  );
 
-      <Pagination
-        topicPrevious={topicPrevious}
-        topicNext={topicNext}
-      />
-    </Container>
+  return (
+    <CustomTopic content={content} />
   );
 };
 
