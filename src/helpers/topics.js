@@ -11,11 +11,11 @@ const topics = [
     id: 3,
     name: 'Hello World'
   },
-  /* 
   {
     id: 4,
-    name: 'Ambiente de Desenvolvimento A'
+    name: 'Console'
   },
+  /* 
   {
     id: 5,
     name: 'Introdução B'
