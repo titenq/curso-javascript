@@ -2,6 +2,7 @@ import { Suspense, lazy } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Layout from './components/Layout';
+import Loading from './components/Loading';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
@@ -35,7 +36,7 @@ const App = () => {
                 key={topic.id}
                 path={`/${slug(topic.name)}`}
                 element={
-                  <Suspense fallback={<div>Loading...</div>}>
+                  <Suspense fallback={<Loading />}>
                     <DynamicComponent />
                   </Suspense>
                 }
