@@ -1,9 +1,12 @@
+import { Image } from 'react-bootstrap';
+
 import styles from '../Topics.module.css';
 import Code from '../../../components/Code';
 import helloWorld from '../../../helpers/code/helloWorld';
 import helloWorldC from '../../../helpers/code/helloWorldC';
 import helloWorldJava from '../../../helpers/code/helloWorldJava';
 import CustomTopic from '../CustomTopic';
+import vscodeCriarArquivo from '../../../assets/img/vscode-criar-arquivo.png';
 
 const HelloWorld = () => {
   const content = (
@@ -44,7 +47,26 @@ const HelloWorld = () => {
         Repita aquele processo para abrir uma pasta no <span className="fst-italic">VS Code</span>. Clique com o botão direito do mouse na pasta <span className="fst-italic">hello-world</span>, clique em <span className="fst-italic">Mostrar mais opções</span> e clique em <span className="fst-italic">Abrir com Code</span>.
       </p>
 
+      <p className={styles.p_container}>
+        Com o <span className="fst-italic">VS Code</span> aberto, clique no ícone de <span className="fst-italic">New File...</span> (1) e dê o nome de <span className="fst-italic">index.js</span> (2).
+      </p>
+
+      <Image
+        src={vscodeCriarArquivo}
+        fluid
+        className={styles.img}
+      />
+
+      <p className={styles.p_container}>
+        Digite o código abaixo:
+      </p>
+
       <Code codeString={helloWorld}  />
+
+      <p className={styles.p_container}>
+        Tecle <kbd>Ctrl</kbd> + <kbd>S</kbd>
+      </p>
+
     </>
   );
 
