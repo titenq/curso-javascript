@@ -1,4 +1,4 @@
-import { Image } from 'react-bootstrap';
+import { Badge, Image } from 'react-bootstrap';
 
 import styles from '../Topics.module.css';
 import Code from '../../../components/Code';
@@ -7,6 +7,10 @@ import helloWorldC from '../../../helpers/code/helloWorldC';
 import helloWorldJava from '../../../helpers/code/helloWorldJava';
 import CustomTopic from '../CustomTopic';
 import vscodeCriarArquivo from '../../../assets/img/vscode-criar-arquivo.png';
+import vscodeNaoGravado from '../../../assets/img/vscode-nao-gravado.png';
+import vscodeGravado from '../../../assets/img/vscode-gravado.png';
+import vscodeAbrirTerminal from '../../../assets/img/vscode-abrir-terminal.png';
+import vscodeTerminal from '../../../assets/img/vscode-terminal.png';
 
 const HelloWorld = () => {
   const content = (
@@ -48,10 +52,15 @@ const HelloWorld = () => {
       </p>
 
       <p className={styles.p_container}>
-        Com o <span className="fst-italic">VS Code</span> aberto, clique no ícone de <span className="fst-italic">New File...</span> (1) e dê o nome de <span className="fst-italic">index.js</span> (2).
+        Com o <span className="fst-italic">VS Code</span> aberto,
+        <Badge pill bg="light" text="dark" className="mx-2">1</Badge>
+         clique no ícone de <span className="fst-italic">New File...</span>
+        <Badge pill bg="light" text="dark" className="mx-2">2</Badge>
+         e dê o nome de <span className="fst-italic">index.js</span>.
       </p>
 
       <Image
+        width={400}
         src={vscodeCriarArquivo}
         fluid
         className={styles.img}
@@ -64,9 +73,50 @@ const HelloWorld = () => {
       <Code codeString={helloWorld}  />
 
       <p className={styles.p_container}>
-        Tecle <kbd>Ctrl</kbd> + <kbd>S</kbd>
+        O ícone de uma bola branca ao lado do <span className="fst-italic">index.js</span> significa que o arquivo ou as modificações feitas no arquivo ainda não foram salvas.
       </p>
 
+      <Image
+        width={500}
+        src={vscodeNaoGravado}
+        fluid
+        className={styles.img}
+      />
+
+      <p className={styles.p_container}>
+        Para salvar o arquivo tecle <kbd>Ctrl</kbd> + <kbd>S</kbd>.
+      </p>
+
+      <p className={styles.p_container}>
+        Note que o ícone agora é um <span className="fst-italic">X</span>, indicando que o arquivo está salvo.
+      </p>
+
+      <Image
+        width={500}
+        src={vscodeGravado}
+        fluid
+        className={styles.img}
+      />
+
+      <p className={styles.p_container}>
+        Vamos executar o arquivo no terminal integrado do <span className="fst-italic">VS Code</span>, para isso clique nas reticências <span className="fst-italic">...</span>, em <span className="fst-italic">Terminal</span> e em <span className="fst-italic">New Terminal</span>.
+      </p>
+
+      <Image
+        src={vscodeAbrirTerminal}
+        fluid
+        className={styles.img}
+      />
+
+      <p className={styles.p_container}>
+        Vamos executar o arquivo no terminal integrado do <span className="fst-italic">VS Code</span>, para isso clique nas reticências <span className="fst-italic">...</span>, em <span className="fst-italic">Terminal</span> e em <span className="fst-italic">New Terminal</span>.
+      </p>
+
+      <Image
+        src={vscodeTerminal}
+        fluid
+        className={styles.img}
+      />
     </>
   );
 
