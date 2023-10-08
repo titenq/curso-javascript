@@ -22,7 +22,7 @@ const AmbienteDeDesenvolvimento = () => {
       </p>
 
       <p className={styles.p_container}>
-        Utilize os links abaixo para baixar e instalar os programas. Todos os programas têm versões gratuitas para Windows, Linux e macOS, nesse tutorial iremos utilizar o Sistema Operacional Windows por ser o mais utilizado pelos usuários.
+        Utilize os links abaixo para baixar e instalar os programas. Todos os programas têm versões gratuitas para Windows, Linux e macOS, nesse tutorial iremos usar o Sistema Operacional Windows por ser o mais utilizado pelos usuários.
       </p>
 
       <p className={styles.p_container}>
