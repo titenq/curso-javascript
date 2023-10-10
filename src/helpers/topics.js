@@ -16,7 +16,11 @@ const topics = [
     name: 'Variáveis'
   },
   {
-    id: 4,
+    id: 5,
+    name: 'Tipos de Dados'
+  },
+  {
+    id: 6,
     name: 'Console'
   },
 ];
