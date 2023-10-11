@@ -17,10 +17,14 @@ const topics = [
   },
   {
     id: 5,
-    name: 'Tipos de Dados'
+    name: 'Comentários'
   },
   {
     id: 6,
+    name: 'Tipos de Dados'
+  },
+  {
+    id: 7,
     name: 'Console'
   },
 ];

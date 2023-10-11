@@ -127,7 +127,7 @@ const Variaveis = () => {
       </p>
 
       <p className={styles.p_container}>
-        O valor que podemos atribuir a uma variável é qualquer um dos tipos de dados do Javascript, o que veremos no próximo tópico.
+        O valor que podemos atribuir a uma variável é qualquer um dos tipos de dados do Javascript, o que veremos nos próximos tópicos.
       </p>
 
       <p className={styles.p_container}>
@@ -135,7 +135,7 @@ const Variaveis = () => {
       </p>
 
       <p className={styles.p_container}>
-        Para evirtar um erro nos 0,01% dos casos, nesse tutorial vamos sempre incluir o <span className="fst-italic">; (ponto e vírgula)</span>.
+        Para evitar um erro nos 0,01% dos casos, nesse tutorial, vamos sempre incluir o <span className="fst-italic">; (ponto e vírgula)</span>.
       </p>
     </>
   );

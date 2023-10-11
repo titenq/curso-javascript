@@ -12,6 +12,11 @@
   font-weight: 500;
 }
 
+.subtitle {
+  font-size: 22px;
+  font-weight: 500;
+}
+
 .p_container {
   display: block;
   width: 700px;
