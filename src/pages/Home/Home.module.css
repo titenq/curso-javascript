@@ -19,8 +19,8 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-top: -15px;
-  animation: scaleUp 1s ease-in-out;
-  transform-origin: 100px -100px;
+  opacity: 0;
+  animation: fadeIn 1s ease 1s forwards;
 }
 
 @keyframes scaleUp {
@@ -32,5 +32,14 @@
   }
   100% {
     transform: rotate(0) scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
