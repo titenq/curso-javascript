@@ -1,7 +1,7 @@
 import styles from '../Topics.module.css';
 import CustomTopic from '../CustomTopic';
 import Code from '../../../components/Code';
-import { comentarios01 } from '../../../helpers/code/comentarios';
+import comentarios from '../../../helpers/code/comentarios';
 
 const Comentarios = () => {
   const content = (
@@ -22,7 +22,7 @@ const Comentarios = () => {
         Você pode aninhar um comentário de uma linha dentro de um comentário de múltiplas linhas mas não pode aninhar comentários de múltiplas linhas.
       </p>
 
-      <Code codeString={comentarios01}  />
+      <Code codeString={comentarios['01']}  />
     </>
   );
 

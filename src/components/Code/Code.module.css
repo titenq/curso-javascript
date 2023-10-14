@@ -5,6 +5,7 @@
   flex-direction: column;
   padding: 10px;
   position: relative;
+  max-width: 80%;
 }
 
 .code_container {

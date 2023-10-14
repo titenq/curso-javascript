@@ -2,11 +2,7 @@ import { Badge, Image } from 'react-bootstrap';
 
 import styles from '../Topics.module.css';
 import Code from '../../../components/Code';
-import {
-  helloWorld01,
-  helloWorld02,
-  helloWorld03,
-} from '../../../helpers/code/helloWorld';
+import helloWorld from '../../../helpers/code/helloWorld';
 import CustomTopic from '../CustomTopic';
 import vscodeCriarArquivo from '../../../assets/img/vscode-criar-arquivo.png';
 import vscodeNaoGravado from '../../../assets/img/vscode-nao-gravado.png';
@@ -33,13 +29,13 @@ const HelloWorld = () => {
         <span className="fst-italic">Hello World</span> na linguagem C: {' '}
       </p>
 
-      <Code codeString={helloWorld01}  />
+      <Code codeString={helloWorld['01']}  />
 
       <p className={styles.p_container}>
         <span className="fst-italic">Hello World</span> na linguagem Java: {' '}
       </p>
 
-      <Code codeString={helloWorld02}  />
+      <Code codeString={helloWorld['02']}  />
 
       <p className={styles.p_container}>
         Agora é a sua vez de escrever o <span className="fst-italic">Hello World</span> na linguagem Javascript:
@@ -68,7 +64,7 @@ const HelloWorld = () => {
         Digite o código abaixo:
       </p>
 
-      <Code codeString={helloWorld03}  />
+      <Code codeString={helloWorld['03']}  />
 
       <p className={styles.p_container}>
         O ícone de uma bola branca ao lado do

@@ -1,0 +1,9 @@
+.textarea, .textarea:focus, .textarea:active {
+  width: 500px;
+  background-color: #35474f;
+  background: #263238;
+  box-shadow: inset 0 0 5px #ede7f6;
+  color: #ede7f6;
+  font-family: monospace;
+  font-size: 13px;
+}

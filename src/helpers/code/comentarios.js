@@ -1,4 +1,5 @@
-const comentarios01 = 
+const comentarios = {
+  '01':
 `// Comentário de uma linha
 
 const saudacao = 'Hello World'; // O comentário pode começar depois do código
@@ -17,6 +18,7 @@ dentro de um comentário de múltiplas linhas
 
 Mas não pode aninhar comentários de múltiplas linhas
 */
-`;
+`
+};
 
-export { comentarios01 };
+export default comentarios;

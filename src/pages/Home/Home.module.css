@@ -9,7 +9,7 @@
 .logo {
   width: 256px;
   height: 256px;
-  animation: scaleUp 1s ease;
+  animation: scaleUp 1s ease-in-out;
   transform-origin: center;
 }
 
@@ -19,15 +19,18 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-top: -15px;
-  animation: scaleUp 1s ease;
+  animation: scaleUp 1s ease-in-out;
   transform-origin: 100px -100px;
 }
 
 @keyframes scaleUp {
-  from {
-    transform: scale(0.1);
+  0% {
+    transform: rotate(45deg) scale(0);
   }
-  to {
-    transform: scale(1);
+  70% {
+    transform: rotate(0) scale(2);
+  }
+  100% {
+    transform: rotate(0) scale(1);
   }
 }

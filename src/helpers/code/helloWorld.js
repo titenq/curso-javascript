@@ -1,13 +1,14 @@
-const helloWorld01 = 
+const helloWorld = {
+  '01':
 `int main() 
 { 
   printf("Hello World!\\n");
   
   return 0; 
 }
-`;
+`,
 
-const helloWorld02 = 
+  '02':
 `public class HelloWorld
 { 
   public static void main(String[] args)
@@ -15,14 +16,11 @@ const helloWorld02 =
     System.out.println("Hello, World!"); 
   } 
 }
-`;
+`,
 
-const helloWorld03 = 
+  '03':
 `console.log('Hello World');
-`;
-
-export {
-  helloWorld01,
-  helloWorld02,
-  helloWorld03,
+`
 };
+
+export default helloWorld;

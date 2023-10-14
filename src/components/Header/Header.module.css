@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #6a1b9a;
+  background-color: #F8DC3E;
   height: 60px;
   z-index: 2000;
 }
@@ -8,6 +8,7 @@
   width: 50px;
   height: 50px;
   cursor: pointer;
+  box-shadow: 0px 0px 5px 0px #263238;
 }
 
 .font {
@@ -16,18 +17,18 @@
 }
 
 .links {
-  color: #ede7f6;
+  color: #263238;
   text-decoration: none;
   margin-left: 15px;
   transition: all 0.3s ease-in-out;
 }
 
 .links:hover {
-  color: #d1c4e9;
+  color: #37474f;
 }
 
 .sis {
-  color: #fff;
+  color: #263238;
   font-size: 24px;
   font-weight: 500;
   margin-left: 50px;

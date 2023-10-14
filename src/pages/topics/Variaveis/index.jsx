@@ -3,14 +3,7 @@ import { Table } from 'react-bootstrap';
 import styles from '../Topics.module.css';
 import CustomTopic from '../CustomTopic';
 import Code from '../../../components/Code';
-import {
-  variaveis01,
-  variaveis02,
-  variaveis03,
-  variaveis04,
-  variaveis05,
-  variaveis06,
-} from '../../../helpers/code/variaveis';
+import variaveis from '../../../helpers/code/variaveis';
 import keywords from '../../../helpers/keywords';
 
 const PalavrasChaveTable = () => {
@@ -51,13 +44,13 @@ const Variaveis = () => {
         seguido do caracter <span className="fst-italic">; (ponto e vírgula)</span>, que indica o final da instrução.
       </p>
 
-      <Code codeString={variaveis01} />
+      <Code codeString={variaveis['01']} />
 
       <p className={styles.p_container}>
         No exemplo acima estamos declarando uma variável e atribuindo um valor a ela na mesma linha. Também podemos declarar uma variável <span className="fst-italic">(linha 1)</span> e depois atribuir um valor a essa variável <span className="fst-italic">(linha 3)</span>, e até mesmo reatribuir outro valor a essa variável <span className="fst-italic">(linha 7)</span>.
       </p>
 
-      <Code codeString={variaveis02} />
+      <Code codeString={variaveis['02']} />
 
       <p className={styles.p_container}>
         Se você tentar trocar o <span className="fst-italic">let</span> pela palavra-chave <span className="fst-italic">const</span> no código acima, vai gerar o seguinte erro: <span className="fst-italic">&apos;const&apos; declarations must be initialized</span>, (as declarações &apos;const&apos; devem ser inicializadas).
@@ -75,13 +68,13 @@ const Variaveis = () => {
         Sobre o identificador, ele não pode começar com número, não pode começar por caracteres especiais, exceto o <span className="fst-italic">underline (_)</span> e o <span className="fst-italic">cifrão ($)</span> e não pode conter espaço.
       </p>
 
-      <Code codeString={variaveis03} />
+      <Code codeString={variaveis['03']} />
 
       <p className={styles.p_container}>
         O <span className="fst-italic">Javascript</span> é <span className="fst-italic">case-sensitive</span>, ou seja, diferencia maiúsculas de minúsculas.
       </p>
 
-      <Code codeString={variaveis04} />
+      <Code codeString={variaveis['04']} />
 
       <p className={styles.p_container}>
         Por convenção, no <span className="fst-italic">Javascript</span> usamos para identificadores de variáveis a notação <span className="fst-italic">camelCase</span>.
@@ -99,7 +92,7 @@ const Variaveis = () => {
         Número vinte na notação binária: 10100<br />
       </p>
 
-      <Code codeString={variaveis05} />
+      <Code codeString={variaveis['05']} />
 
       <p className={styles.p_container}>
         Note também que eu escrevi Joao sem acento. O Javascript até aceita acentos nos seus identificadores mas por convenção nunca use acentos.
@@ -109,7 +102,7 @@ const Variaveis = () => {
         Outros tipos de notação no Javascript, para identificadores de variáveis utilize sempre o <span className="fst-italic">camelCase</span>:
       </p>
 
-      <Code codeString={variaveis06} />
+      <Code codeString={variaveis['06']} />
 
       <p className={styles.p_container}>
         Utilize identificadores que realmente identifiquem a variável pelo nome, evite identificadores como:<br />
