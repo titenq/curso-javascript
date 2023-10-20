@@ -223,6 +223,60 @@ const TiposDeDados = () => {
       </p>
 
       <Code codeString={tiposDeDados['18']} />
+
+      <h3 className={styles.subtitle}>function</h3>
+      <p className={styles.p_container}>
+        Uma função em Javascript é um bloco de código reutilizável que realiza uma tarefa específica. As funções podem aceitar argumentos, realizar cálculos, executar ações e retornar valores. Elas são essenciais para organizar e reutilizar o código em seus programas.
+      </p>
+
+      <Code codeString={tiposDeDados['19']} />
+
+      <p className={styles.p_container}>
+        Vamos entender a sintaxe da função acima:
+      </p>
+
+      <p className={styles.p_container}>
+        <b>function:</b> é uma palavra-chave em Javascript que indica o início da definição de uma função. Existem outras formas de definirmos uma função, o que veremos nos próximos tópicos.
+      </p>
+
+      <p className={styles.p_container}>
+        <b>soma:</b> é o identificador da função, usamos a mesma regra para os identificadores de variável. Você pode escolher qualquer nome que seja descritivo e único para sua função.
+      </p>
+
+      <p className={styles.p_container}>
+        <b>(num1, num2):</b> dentro dos parênteses, temos os parâmetros da função. Neste caso, a função aceita dois parâmetros: num1 e num2. Os parâmetros são como variáveis que a função pode usar, e eles representam os valores que você fornecerá quando invocar a função. Uma função também pode não ter nenhum parâmetro, nesse caso é utilizado os parênteses vazios ();
+      </p>
+
+      <p className={styles.p_container}>
+        <b>{'{'} &nbsp; {'}'}:</b> as chaves delimitam o bloco de código da função, onde as ações da função são definidas.
+      </p>
+
+      <p className={styles.p_container}>
+        <b>return:</b> é outra palavra-chave em Javascript usada para especificar o valor que a função deve retornar. O valor após o return é o resultado da função. Uma função também pode não retornar nada, ela faz alguma ação sem retorno, nesse caso ela retorna undefined implicitamente.
+      </p>
+
+      <p className={styles.p_container}>
+        <b>num1 + num2:</b> dentro do return temos uma expressão que realiza a operação de adição entre os parâmetros num1 e num2.
+      </p>
+
+      <Alerta
+        message="A definição de uma função somente cria a função, para utilizar a função ela tem que ser invocada, soma(8, 10). Na definição da função podemos criar os parâmetros, nesse exemplo, num1 e num2, e ao invocar a função passamos os argumentos, nesse exemplo, 8 e 10."
+      />
+
+      <h3 className={styles.subtitle}>object</h3>
+      <p className={styles.p_container}>
+        Objeto é um tipo de dado que pode armazenar várias informações relacionadas, essas informações são organizadas em pares (chave: valor), onde cada chave é uma propriedade do objeto, como se fosse uma variável dentro do objeto, que recebe um valor que pode ser qualquer tipo de dado, inclusive outro objeto. 
+      </p>
+
+      <p className={styles.p_container}>
+        Para recuperar o valor de uma propriedade podemos usar a notação de colchetes ([ &nbsp; ]) ou a notação de ponto ( . ).
+      </p>
+
+      <Code codeString={tiposDeDados['20']} />
+
+      <Alerta
+        message="Note que na notação de colchetes passamos o nome da propriedade como uma string, entre aspas, e na notação de ponto passamos o nome da propriedade sem aspas, como se fosse uma variável."
+      />
     </>
   );
 

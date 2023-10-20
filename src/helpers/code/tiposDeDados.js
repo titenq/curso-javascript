@@ -176,6 +176,46 @@ console.log(numeros[1][2]); // 6
 console.log(notas); // [ 8, 7, <1 empty item>, 5 ]
 console.log(notas[2]); // undefined
 `,
+
+  '19':
+`let num1 = 8;
+let num2 = 10;
+
+console.log(num1 + num2); // 18
+
+function soma(num1, num2) {
+  return num1 + num2;
+}
+
+console.log(soma(num1, num2)); // 18
+console.log(soma(10, 20)); // 30
+console.log(soma(8, 2)); // 10
+console.log(soma(7, 7)); // 14
+`,
+
+  '20':
+`const profissional = {
+  nome: 'Manoel',
+  sobrenome: 'Silva',
+  email: 'manoelsilva@email.com',
+  idade: 25,
+  profissao: 'Programador'
+};
+
+console.log(profissional);
+/* 
+{
+  nome: 'Manoel',
+  sobrenome: 'Silva',
+  email: 'manoelsilva@email.com',
+  idade: 25,
+  profissao: 'Programador'
+}
+*/
+
+console.log(profissional.email); // manoelsilva@email.com
+console.log(profissional['nome']); // Manoel
+`,
 };
 
 export default tiposDeDados;

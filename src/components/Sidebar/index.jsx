@@ -26,7 +26,9 @@ const Sidebar = () => {
       {showNav && (
         <Nav defaultActiveKey="/" className={styles.nav} >
           {topics.map(topic => (
-            <NavLink key={topic.id} className={styles.links} to={slug(topic.name)}>{topic.name}</NavLink>
+            <NavLink key={topic.id} className={styles.links} to={slug(topic.name)}>
+              {topic.name}
+            </NavLink>
           ))}
         </Nav>
       )}

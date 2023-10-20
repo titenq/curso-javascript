@@ -25,6 +25,14 @@ const topics = [
   },
   {
     id: 7,
+    name: 'var let const'
+  },
+  {
+    id: 8,
+    name: 'Operadores'
+  },
+  {
+    id: 9,
     name: 'Console'
   },
 ];

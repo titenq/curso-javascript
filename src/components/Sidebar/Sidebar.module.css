@@ -29,6 +29,10 @@
   margin: 0 auto;
 }
 
+.links:first-child {
+  margin-top: 10px;
+}
+
 .open {
   width: 200px;
   transition: all 0.5s;
