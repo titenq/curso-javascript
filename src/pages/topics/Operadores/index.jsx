@@ -4,6 +4,7 @@ import styles from '../Topics.module.css';
 import CustomTopic from '../CustomTopic';
 import Code from '../../../components/Code';
 import operadores from '../../../helpers/code/operadores';
+import Alerta from '../../../components/Alerta';
 
 const Operadores = () => {
   const tooltip = content => (
@@ -12,10 +13,10 @@ const Operadores = () => {
     </Tooltip>
   );
 
-  const scrollTo = id => {
+  const scrollToId = id => {
     const element = document.getElementById(id);
     element.scrollIntoView({
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
@@ -28,7 +29,7 @@ const Operadores = () => {
       <Table style={{ maxWidth: "700px" }} striped bordered hover size="sm" variant="dark">
         <tbody>
           <tr>
-            <td className={styles.td_title} onClick={() => scrollTo("opAritmeticos")}>
+            <td className={styles.td_title} onClick={() => scrollToId("opAritmeticos")}>
               Operadores Aritméticos
             </td>
             <OverlayTrigger placement="top" overlay={tooltip('+ (adição)')}>
@@ -53,7 +54,7 @@ const Operadores = () => {
             <td className={styles.td_operadores}></td>
           </tr>
           <tr>
-            <td className={styles.td_title} onClick={() => scrollTo("opAtribuicao")}>
+            <td className={styles.td_title} onClick={() => scrollToId("opAtribuicao")}>
               Operadores de Atribuição
             </td>
             <OverlayTrigger placement="top" overlay={tooltip('= (atribuição)')}>
@@ -80,7 +81,7 @@ const Operadores = () => {
             <td className={styles.td_operadores}></td>
           </tr>
           <tr>
-            <td className={styles.td_title} onClick={() => scrollTo("opComparacao")}>
+            <td className={styles.td_title} onClick={() => scrollToId("opComparacao")}>
               Operadores de Comparação
             </td>
             <OverlayTrigger placement="top" overlay={tooltip('== (igualdade)')}>
@@ -109,7 +110,7 @@ const Operadores = () => {
             </OverlayTrigger>
           </tr>
           <tr>
-            <td className={styles.td_title} onClick={() => scrollTo("opLogicos")}>
+            <td className={styles.td_title} onClick={() => scrollToId("opLogicos")}>
               Operadores Lógicos
             </td>
             <OverlayTrigger placement="top" overlay={tooltip('&& (e lógico)')}>
@@ -128,7 +129,7 @@ const Operadores = () => {
             <td className={styles.td_operadores}></td>
           </tr>
           <tr>
-            <td className={styles.td_title} onClick={() => scrollTo("opIncrementoDecremento")}>
+            <td className={styles.td_title} onClick={() => scrollToId("opIncrementoDecremento")}>
               Operadores de Incremento e Decremento
             </td>
             <OverlayTrigger placement="top" overlay={tooltip('++ (incremento)')}>
@@ -145,7 +146,7 @@ const Operadores = () => {
             <td className={styles.td_operadores}></td>
           </tr>
           <tr>
-            <td className={styles.td_title} onClick={() => scrollTo("opConcatenacao")}>
+            <td className={styles.td_title} onClick={() => scrollToId("opConcatenacao")}>
               Operador de Concatenação
             </td>
             <OverlayTrigger placement="top" overlay={tooltip('+ (concatenação de strings)')}>
@@ -160,7 +161,7 @@ const Operadores = () => {
             <td className={styles.td_operadores}></td>
           </tr>
           <tr>
-            <td className={styles.td_title} onClick={() => scrollTo("opBitwise")}>
+            <td className={styles.td_title} onClick={() => scrollToId("opBitwise")}>
               Operadores Bitwise
             </td>
             <OverlayTrigger placement="top" overlay={tooltip('& (E bitwise)')}>
@@ -185,7 +186,7 @@ const Operadores = () => {
             <td className={styles.td_operadores}></td>
           </tr>
           <tr>
-            <td className={styles.td_title} onClick={() => scrollTo("opTernario")}>
+            <td className={styles.td_title} onClick={() => scrollToId("opTernario")}>
               Operador Ternário
             </td>
             <OverlayTrigger placement="top" overlay={tooltip('? \u00A0 : \u00A0 (ternário)')}>
@@ -200,7 +201,7 @@ const Operadores = () => {
             <td className={styles.td_operadores}></td>
           </tr>
           <tr>
-            <td className={styles.td_title} onClick={() => scrollTo("opAcessoProps")}>
+            <td className={styles.td_title} onClick={() => scrollToId("opAcessoProps")}>
               Operadores de Acesso a Propriedades
             </td>
             <OverlayTrigger placement="top" overlay={tooltip('. \u00A0(ponto)')}>
@@ -217,7 +218,7 @@ const Operadores = () => {
             <td className={styles.td_operadores}></td>
           </tr>
           <tr>
-            <td className={styles.td_title} onClick={() => scrollTo("opVirgula")}>
+            <td className={styles.td_title} onClick={() => scrollToId("opVirgula")}>
               Operador de Vírgula
             </td>
             <OverlayTrigger placement="top" overlay={tooltip(', (retorna a última expressão)')}>
@@ -232,7 +233,7 @@ const Operadores = () => {
             <td className={styles.td_operadores}></td>
           </tr>
           <tr>
-            <td className={styles.td_title} onClick={() => scrollTo("opPalavraChave")}>
+            <td className={styles.td_title} onClick={() => scrollToId("opPalavraChave")}>
               Operadores com Palavra-Chave
             </td>
             <OverlayTrigger placement="top" overlay={tooltip('in (verifica se uma propriedade está em um objeto)')}>
@@ -255,7 +256,7 @@ const Operadores = () => {
             <td className={styles.td_operadores}></td>
           </tr>
           <tr>
-            <td className={styles.td_title} onClick={() => scrollTo("opOutros")}>
+            <td className={styles.td_title} onClick={() => scrollToId("opOutros")}>
               Outros Operadores
             </td>
             <OverlayTrigger placement="top" overlay={tooltip('?.(optional chaining)')}>
@@ -317,13 +318,25 @@ const Operadores = () => {
 
       <h3 className={styles.subtitle} id='opAtribuicao'>Operadores de Atribuição</h3>
       <p className={styles.p_container}>
-        Operadores de Atribuição são usados para atribuir valores a variáveis.
+        Operadores de Atribuição são utilizados para atribuir valores a variáveis. Já vimos sobre o operador de atribuição (=) que atribui um valor a uma variável, agora vamos ver alguns exemplos de outros operadores de atribuição.
+      </p>
+
+      <Code codeString={operadores['03']} />
+
+      <p className={styles.p_container}>
+        Ainda existem outros operadores de atribuição mas como não são comumente usados não vamos dar exemplos de uso deles.
       </p>
 
       <h3 className={styles.subtitle} id='opComparacao'>Operadores de Comparação</h3>
       <p className={styles.p_container}>
-        Operadores de Comparação
+        Operadores de Comparação são utilizados para comparar valores e expressões, geralmente retornando um valor booleano (true ou false) que indica se a comparação é verdadeira ou falsa. Eles são fundamentais para controlar o fluxo de um programa e tomar decisões lógicas. 
       </p>
+
+      <Code codeString={operadores['04']} />
+
+      <Alerta
+        message="Note que nos operadores == e != podemos ter um retorno não desejável, portanto, sempre que possível use os operadores === e !==."
+      />
 
       <h3 className={styles.subtitle} id='opLogicos'>Operadores Lógicos</h3>
       <p className={styles.p_container}>
