@@ -122,7 +122,9 @@ const Operadores = () => {
             <OverlayTrigger placement="top" overlay={tooltip('! (não lógico)')}>
               <td className={styles.td_operadores}>!</td>
             </OverlayTrigger>
-            <td className={styles.td_operadores}></td>
+            <OverlayTrigger placement="top" overlay={tooltip('?? (nullish coalescing)')}>
+              <td className={styles.td_operadores}>??</td>
+            </OverlayTrigger>
             <td className={styles.td_operadores}></td>
             <td className={styles.td_operadores}></td>
             <td className={styles.td_operadores}></td>
@@ -210,7 +212,9 @@ const Operadores = () => {
             <OverlayTrigger placement="top" overlay={tooltip('[\u00A0\u00A0] (colchetes)')}>
               <td className={styles.td_operadores}>[{' '}]</td>
             </OverlayTrigger>
-            <td className={styles.td_operadores}></td>
+            <OverlayTrigger placement="top" overlay={tooltip('?.(optional chaining)')}>
+              <td className={styles.td_operadores}>?.</td>
+            </OverlayTrigger>
             <td className={styles.td_operadores}></td>
             <td className={styles.td_operadores}></td>
             <td className={styles.td_operadores}></td>
@@ -236,36 +240,15 @@ const Operadores = () => {
             <td className={styles.td_title} onClick={() => scrollToId("opPalavraChave")}>
               Operadores com Palavra-Chave
             </td>
-            <OverlayTrigger placement="top" overlay={tooltip('in (verifica se uma propriedade está em um objeto)')}>
-              <td className={styles.td_operadores}>in</td>
+            <OverlayTrigger placement="top" overlay={tooltip('typeof (retorna o tipo de um valor)')}>
+              <td className={styles.td_operadores}>typeof</td>
             </OverlayTrigger>
             <OverlayTrigger placement="top" overlay={tooltip('instanceof (verifica se um objeto é uma instância de uma classe ou construtor)')}>
               <td className={styles.td_operadores}>instanceof</td>
             </OverlayTrigger>
-            <OverlayTrigger placement="top" overlay={tooltip('typeof (retorna o tipo de um valor)')}>
-              <td className={styles.td_operadores}>typeof</td>
-            </OverlayTrigger>
             <OverlayTrigger placement="top" overlay={tooltip('delete (remove propriedade de objeto ou elemento de array)')}>
               <td className={styles.td_operadores}>delete</td>
             </OverlayTrigger>
-            <OverlayTrigger placement="top" overlay={tooltip('new (cria uma instância de um objeto)')}>
-              <td className={styles.td_operadores}>new</td>
-            </OverlayTrigger>
-            <td className={styles.td_operadores}></td>
-            <td className={styles.td_operadores}></td>
-            <td className={styles.td_operadores}></td>
-          </tr>
-          <tr>
-            <td className={styles.td_title} onClick={() => scrollToId("opOutros")}>
-              Outros Operadores
-            </td>
-            <OverlayTrigger placement="top" overlay={tooltip('?.(optional chaining)')}>
-              <td className={styles.td_operadores}>?.</td>
-            </OverlayTrigger>
-            <OverlayTrigger placement="top" overlay={tooltip('?? (nullish coalescing)')}>
-              <td className={styles.td_operadores}>??</td>
-            </OverlayTrigger>
-            <td className={styles.td_operadores}></td>
             <td className={styles.td_operadores}></td>
             <td className={styles.td_operadores}></td>
             <td className={styles.td_operadores}></td>
@@ -334,54 +317,121 @@ const Operadores = () => {
 
       <Code codeString={operadores['04']} />
 
+      <p className={styles.p_container}>
+        Preste atenção na diferença entre igualdade (==) e igualdade estrita (===), a igualdade verifica apenas o valor dos operandos, por isso na linha 6, 10 (number) é igual a &apos;10&apos; (string) e a igualdade estrita verifica o valor e o tipo dos operandos, por isso na linha 9, a mesma comparação é avaliada como false.
+      </p>
+
       <Alerta
         message="Note que nos operadores == e != podemos ter um retorno não desejável, portanto, sempre que possível use os operadores === e !==."
       />
 
       <h3 className={styles.subtitle} id='opLogicos'>Operadores Lógicos</h3>
       <p className={styles.p_container}>
-        Operadores Lógicos
+        Operadores Lógicos são utilizados para realizar operações de lógica booleana retornando true ou false.
       </p>
+
+      <p className={styles.p_container}>
+        O && (E Lógico) retorna true se todos os operandos forem true.
+      </p>
+
+      <p className={styles.p_container}>
+        O || (OU Lógico) retorna true se pelo menos um dos operandos forem true.
+      </p>
+
+      <p className={styles.p_container}>
+        O ! (NÃO Lógico) inverte o valor booleando, de true para false ou de false para true.
+      </p>
+
+      <p className={styles.p_container}>
+        O ?? (Nullish coalescing) retorna o seu operando do lado direito quando o seu operador do lado esquerdo é null ou undefined, caso contrário, ele retorna o seu operando do lado esquerdo.
+      </p>
+
+      <Code codeString={operadores['05']} />
 
       <h3 className={styles.subtitle} id='opIncrementoDecremento'>Operadores de Incremento e Decremento</h3>
       <p className={styles.p_container}>
-        Operadores de Incremento e Decremento
+        Operadores de Incremento e Decremento são utilizados para incrementar 1 a uma variável (<span className={styles.td_operadores}>++</span>) ou decrementar 1 a uma variável (<span className={styles.td_operadores}>--</span>). Podem ser pré-incremento / pré-decremento quando o operador vem antes da variável ou pós-incremento / pós-decremento quando o operador vem depois da variável.
       </p>
+
+      <Code codeString={operadores['06']} />
 
       <h3 className={styles.subtitle} id='opConcatenacao'>Operador de Concatenação</h3>
       <p className={styles.p_container}>
-        Operador de Concatenação
+        Operador de Concatenação é utilizado para concatenar (juntar) duas ou mais strings, resultando em uma única string.
       </p>
+
+      <Code codeString={operadores['07']} />
+
+      <Alerta
+        message="Note que na linha 5 é exibido nome e sobrenome juntos e na linha 8 é exibido separados porque na linha 7 é concatenado um espaço entre nome e sobrenome."
+      />
 
       <h3 className={styles.subtitle} id='opBitwise'>Operadores de Bitwise</h3>
       <p className={styles.p_container}>
-        Operadores de Bitwise
+        Operadores de Bitwise são utilizados para realizar operações de manipulação de bits em números inteiros. Eles tratam números como sequências de bits e executam várias operações bit a bit.
       </p>
+
+      <Alerta
+        message="Os operadores de bitwise quase nunca são utilizados, portanto não invistam muito tempo para entendê-los, só estamos exibindo aqui para que você saiba que eles existem."
+      />
+
+      <p className={styles.p_container}>
+        Os números inteiros são convertidos em binário (sequência de 0 e 1), esses binários são colocados um embaixo do outro e é aplicado a lógica booleana da última coluna para a primeira coluna, convertendo o 0 para false e o 1 para true.
+      </p>
+
+      <Code codeString={operadores['08']} />
 
       <h3 className={styles.subtitle} id='opTernario'>Operador Ternário</h3>
       <p className={styles.p_container}>
-        Operador Ternário
+        Operador Ternário é utilizado para retornar um ou outro valor dependendo se a avaliação de uma estrutura condicional retorna true ou false.
       </p>
+
+      <Code codeString={operadores['09']} />
+
+      <Alerta
+        message="O operador ternário também é chamado de if reduzido. Veremos sobre o if nos próximos tópicos."
+      />
 
       <h3 className={styles.subtitle} id='opAcessoProps'>Operadores de Acesso a Propriedades</h3>
       <p className={styles.p_container}>
-        Operadores de Acesso a Propriedades
+        Operadores de Acesso a Propriedades são utilizados para acessar as propriedades de objetos, o Optional Chaining é uma forma mais segura de acesso porque antes de acessar a propriedade ele verifica se ela existe.
       </p>
+
+      <Code codeString={operadores['10']} />
+
+      <Alerta
+        message="Note que se tentarmos acessar uma propriedade que não existe no objeto será retornado undefined, como nas linhas 9 e 10. Sobre o Optional Chaining veja que a linha 12 está comentada porque ao tentarmos acessar a propriedade email, que não existe no objeto, e encadearmos uma função, irá gerar o erro da linha 13, mas ao usarmos o Optional Chaining, como na linha 15, não gera o erro e retorna undefined. Veremos mais sobre objetos nos próximos tópicos."
+      />
 
       <h3 className={styles.subtitle} id='opVirgula'>Operador de Vírgula</h3>
       <p className={styles.p_container}>
-        Operador de Vírgula
+        Operador de Vírgula é utilizado para combinar várias expressões em uma única instrução. Ele avalia cada expressão da esquerda para a direita e retorna o valor da última expressão.
       </p>
+
+      <Code codeString={operadores['11']} />
+
+      <Alerta
+        message="O operador de vírgula é pouco utilizado e pode deixar o código menos legível, portanto não invistam muito tempo para entendê-los, só estamos exibindo aqui para que você saiba que eles existem."
+      />
 
       <h3 className={styles.subtitle} id='opPalavraChave'>Operadores com Palavra-chave</h3>
       <p className={styles.p_container}>
-        Operadores com Palavra-chave
+        O operador typeof é utilizado para obter o tipo de dado de uma expressão. Ele retorna uma string que indica o tipo de dado.
       </p>
 
-      <h3 className={styles.subtitle} id='opOutros'>Outros Operadores</h3>
       <p className={styles.p_container}>
-        Outros Operadores
+        O operador instanceof é utilizado para verificar se um objeto é uma instância de uma classe ou construtor específico. Ele retorna true se o objeto for uma instância da classe, caso contrário, retorna false.
       </p>
+
+      <p className={styles.p_container}>
+        O operador delete é utilizado para remover uma propriedade de um objeto. Ele retorna true se a propriedade for removida com sucesso, caso contrário, retorna false. Também pode ser utilizado para remover elementos de um array. O operador delete remove o elemento, mas deixa o valor undefined no array.
+      </p>
+
+      <Code codeString={operadores['12']} />
+
+      <Alerta
+        message="Note que na linha 4, typeof null retorna object. O operador delete é considerado por muitos uma má prática, existem formas melhores e mais performáticas de remover propriedades de objetos e elementos de array. Não use o operador delete."
+      />
     </>
   );
 

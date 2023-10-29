@@ -1,9 +1,11 @@
 import { Alert } from 'react-bootstrap';
 import { FiAlertTriangle } from 'react-icons/fi';
 
+import styles from './Alerta.module.css';
+
 const Alerta = props => {
   return (
-    <Alert variant="warning" style={{ width: '600px', backgroundColor: '#F8DC3E', color: '#263238' }}>
+    <Alert variant="warning" className={styles.alerta}>
       <FiAlertTriangle size={30} className="d-block" />
       {props.message}
     </Alert>
