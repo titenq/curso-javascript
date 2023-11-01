@@ -33,10 +33,14 @@ const topics = [
   },
   {
     id: 9,
-    name: 'if else'
+    name: 'if'
   },
   {
     id: 10,
+    name: 'switch'
+  },
+  {
+    id: 11,
     name: 'Console'
   },
 ];

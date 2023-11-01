@@ -4,7 +4,7 @@ import Code from '../../../components/Code';
 import ifElse from '../../../helpers/code/ifElse';
 import Alerta from '../../../components/Alerta';
 
-const IfElse = () => {
+const If = () => {
   const content = (
     <>
       <p className={styles.p_container}>
@@ -64,4 +64,4 @@ const IfElse = () => {
   );
 };
 
-export default IfElse;
+export default If;
