@@ -40,23 +40,48 @@ kbd {
   text-shadow: 0 -1px 0 #000000;
   border-color: #000;
   background-color: #4d4c4c;
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 0, 0, 0.5)), color-stop(80%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0));
-  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0));
-  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0));
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0));
+  background-image: -webkit-gradient(
+    linear,
+    0 0,
+    0 100%,
+    from(rgba(0, 0, 0, 0.5)),
+    color-stop(80%, rgba(0, 0, 0, 0)),
+    to(rgba(0, 0, 0, 0))
+  );
+  background-image: -webkit-linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0) 80%,
+    rgba(0, 0, 0, 0)
+  );
+  background-image: -moz-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0) 80%,
+    rgba(0, 0, 0, 0)
+  );
+  background-image: -o-linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0) 80%,
+    rgba(0, 0, 0, 0)
+  );
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0) 80%,
+    rgba(0, 0, 0, 0)
+  );
   background-repeat: no-repeat;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=0);
-  box-shadow: 0px 2px 0 #000000, 0 3px 1px #999999, inset 0 1px 1px #aaaaaa, inset 0 -1px 3px #272727;
+  box-shadow: 0px 2px 0 #000000, 0 3px 1px #999999, inset 0 1px 1px #aaaaaa,
+    inset 0 -1px 3px #272727;
 }
 
 .p_container:has(kbd) {
   margin-bottom: 20px;
 }
 
-.td_operadores {
-  width: 8%; 
-  text-align: center; 
+.code {
+  width: 8%;
+  text-align: center;
   vertical-align: middle;
   font-family: monospace;
   font-size: 14px;
@@ -75,7 +100,7 @@ kbd {
   bottom: 20px;
   right: 20px;
   background-color: #263238;
-  color: #F8DC3E;
+  color: #f8dc3e;
   font-weight: bold;
   border: none;
   border-radius: 50%;
