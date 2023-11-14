@@ -65,7 +65,7 @@ const Variaveis = () => {
       </p>
 
       <p className={styles.p_container}>
-        Sobre o identificador, ele não pode começar com número, não pode começar por caracteres especiais, exceto o <span className="fst-italic">underline (_)</span> e o <span className="fst-italic">cifrão ($)</span> e não pode conter espaço.
+        Sobre o identificador, ele não pode começar com número, não pode começar por caracteres especiais, exceto o <span className="fst-italic">underscore (_)</span> e o <span className="fst-italic">cifrão ($)</span> e não pode conter espaço.
       </p>
 
       <Code codeString={variaveis['03']} />

@@ -1,24 +1,32 @@
-import { OverlayTrigger, Table, Tooltip } from "react-bootstrap";
+import { useRef } from 'react';
 
-import styles from "../Topics.module.css";
-import CustomTopic from "../CustomTopic";
-import Code from "../../../components/Code";
-import operadores from "../../../helpers/code/operadores";
-import Alerta from "../../../components/Alerta";
+import { OverlayTrigger, Table, Tooltip } from 'react-bootstrap';
+
+import styles from '../Topics.module.css';
+import CustomTopic from '../CustomTopic';
+import Code from '../../../components/Code';
+import operadores from '../../../helpers/code/operadores';
+import Alerta from '../../../components/Alerta';
+import scrollToRef from '../../../helpers/scrollToRef';
 
 const Operadores = () => {
+  const opAritmeticosRef = useRef(null);
+  const opAtribuicaoRef = useRef(null);
+  const opComparacaoRef = useRef(null);
+  const opLogicosRef = useRef(null);
+  const opIncrementoDecrementoRef = useRef(null);
+  const opConcatenacaoRef = useRef(null);
+  const opBitwiseRef = useRef(null);
+  const opTernarioRef = useRef(null);
+  const opAcessoPropsRef = useRef(null);
+  const opVirgulaRef = useRef(null);
+  const opPalavraChaveRef = useRef(null);
+
   const tooltip = (content) => (
     <Tooltip id={`tooltip${content}`} style={{ position: "fixed" }}>
       {content}
     </Tooltip>
   );
-
-  const scrollToId = (id) => {
-    const element = document.getElementById(id);
-    element.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
 
   const content = (
     <>
@@ -40,7 +48,7 @@ const Operadores = () => {
           <tr>
             <td
               className={styles.td_title}
-              onClick={() => scrollToId("opAritmeticos")}
+              onClick={() => scrollToRef(opAritmeticosRef)}
             >
               Operadores Aritméticos
             </td>
@@ -77,7 +85,7 @@ const Operadores = () => {
           <tr>
             <td
               className={styles.td_title}
-              onClick={() => scrollToId("opAtribuicao")}
+              onClick={() => scrollToRef(opAtribuicaoRef)}
             >
               Operadores de Atribuição
             </td>
@@ -125,7 +133,7 @@ const Operadores = () => {
           <tr>
             <td
               className={styles.td_title}
-              onClick={() => scrollToId("opComparacao")}
+              onClick={() => scrollToRef(opComparacaoRef)}
             >
               Operadores de Comparação
             </td>
@@ -169,7 +177,7 @@ const Operadores = () => {
           <tr>
             <td
               className={styles.td_title}
-              onClick={() => scrollToId("opLogicos")}
+              onClick={() => scrollToRef(opLogicosRef)}
             >
               Operadores Lógicos
             </td>
@@ -193,7 +201,7 @@ const Operadores = () => {
           <tr>
             <td
               className={styles.td_title}
-              onClick={() => scrollToId("opIncrementoDecremento")}
+              onClick={() => scrollToRef(opIncrementoDecrementoRef)}
             >
               Operadores de Incremento e Decremento
             </td>
@@ -219,7 +227,7 @@ const Operadores = () => {
           <tr>
             <td
               className={styles.td_title}
-              onClick={() => scrollToId("opConcatenacao")}
+              onClick={() => scrollToRef(opConcatenacaoRef)}
             >
               Operador de Concatenação
             </td>
@@ -240,7 +248,7 @@ const Operadores = () => {
           <tr>
             <td
               className={styles.td_title}
-              onClick={() => scrollToId("opBitwise")}
+              onClick={() => scrollToRef(opBitwiseRef)}
             >
               Operadores Bitwise
             </td>
@@ -280,7 +288,7 @@ const Operadores = () => {
           <tr>
             <td
               className={styles.td_title}
-              onClick={() => scrollToId("opTernario")}
+              onClick={() => scrollToRef(opTernarioRef)}
             >
               Operador Ternário
             </td>
@@ -301,7 +309,7 @@ const Operadores = () => {
           <tr>
             <td
               className={styles.td_title}
-              onClick={() => scrollToId("opAcessoProps")}
+              onClick={() => scrollToRef(opAcessoPropsRef)}
             >
               Operadores de Acesso a Propriedades
             </td>
@@ -332,7 +340,7 @@ const Operadores = () => {
           <tr>
             <td
               className={styles.td_title}
-              onClick={() => scrollToId("opVirgula")}
+              onClick={() => scrollToRef(opVirgulaRef)}
             >
               Operador de Vírgula
             </td>
@@ -353,7 +361,7 @@ const Operadores = () => {
           <tr>
             <td
               className={styles.td_title}
-              onClick={() => scrollToId("opPalavraChave")}
+              onClick={() => scrollToRef(opPalavraChaveRef)}
             >
               Operadores com Palavra-Chave
             </td>
@@ -388,7 +396,7 @@ const Operadores = () => {
         </tbody>
       </Table>
 
-      <h3 className={styles.subtitle} id="opAritmeticos">
+      <h3 className={styles.subtitle} ref={opAritmeticosRef}>
         Operadores Aritméticos
       </h3>
       <p className={styles.p_container}>
@@ -446,7 +454,7 @@ const Operadores = () => {
 
       <Code codeString={operadores["02"]} />
 
-      <h3 className={styles.subtitle} id="opAtribuicao">
+      <h3 className={styles.subtitle} ref={opAtribuicaoRef}>
         Operadores de Atribuição
       </h3>
       <p className={styles.p_container}>
@@ -463,7 +471,7 @@ const Operadores = () => {
         usados não vamos dar exemplos de uso deles.
       </p>
 
-      <h3 className={styles.subtitle} id="opComparacao">
+      <h3 className={styles.subtitle} ref={opComparacaoRef}>
         Operadores de Comparação
       </h3>
       <p className={styles.p_container}>
@@ -485,7 +493,7 @@ const Operadores = () => {
 
       <Alerta message="Note que nos operadores == e != podemos ter um retorno não desejável, portanto, sempre que possível use os operadores === e !==." />
 
-      <h3 className={styles.subtitle} id="opLogicos">
+      <h3 className={styles.subtitle} ref={opLogicosRef}>
         Operadores Lógicos
       </h3>
       <p className={styles.p_container}>
@@ -514,7 +522,7 @@ const Operadores = () => {
 
       <Code codeString={operadores["05"]} />
 
-      <h3 className={styles.subtitle} id="opIncrementoDecremento">
+      <h3 className={styles.subtitle} ref={opIncrementoDecrementoRef}>
         Operadores de Incremento e Decremento
       </h3>
       <p className={styles.p_container}>
@@ -529,7 +537,7 @@ const Operadores = () => {
 
       <Code codeString={operadores["06"]} />
 
-      <h3 className={styles.subtitle} id="opConcatenacao">
+      <h3 className={styles.subtitle} ref={opConcatenacaoRef}>
         Operador de Concatenação
       </h3>
       <p className={styles.p_container}>
@@ -541,7 +549,7 @@ const Operadores = () => {
 
       <Alerta message="Note que na linha 5 é exibido nome e sobrenome juntos e na linha 8 é exibido separados porque na linha 7 é concatenado um espaço entre nome e sobrenome." />
 
-      <h3 className={styles.subtitle} id="opBitwise">
+      <h3 className={styles.subtitle} ref={opBitwiseRef}>
         Operadores de Bitwise
       </h3>
       <p className={styles.p_container}>
@@ -561,7 +569,7 @@ const Operadores = () => {
 
       <Code codeString={operadores["08"]} />
 
-      <h3 className={styles.subtitle} id="opTernario">
+      <h3 className={styles.subtitle} ref={opTernarioRef}>
         Operador Ternário
       </h3>
       <p className={styles.p_container}>
@@ -573,7 +581,7 @@ const Operadores = () => {
 
       <Alerta message="O operador ternário também é chamado de if reduzido. Veremos sobre o if nos próximos tópicos." />
 
-      <h3 className={styles.subtitle} id="opAcessoProps">
+      <h3 className={styles.subtitle} ref={opAcessoPropsRef}>
         Operadores de Acesso a Propriedades
       </h3>
       <p className={styles.p_container}>
@@ -586,7 +594,7 @@ const Operadores = () => {
 
       <Alerta message="Note que se tentarmos acessar uma propriedade que não existe no objeto será retornado undefined, como nas linhas 9 e 10. Sobre o Optional Chaining veja que a linha 12 está comentada porque ao tentarmos acessar a propriedade email, que não existe no objeto, e encadearmos uma função, irá gerar o erro da linha 13, mas ao usarmos o Optional Chaining, como na linha 15, não gera o erro e retorna undefined. Veremos mais sobre objetos nos próximos tópicos." />
 
-      <h3 className={styles.subtitle} id="opVirgula">
+      <h3 className={styles.subtitle} ref={opVirgulaRef}>
         Operador de Vírgula
       </h3>
       <p className={styles.p_container}>
@@ -599,7 +607,7 @@ const Operadores = () => {
 
       <Alerta message="O operador de vírgula é pouco utilizado e pode deixar o código menos legível, portanto não invistam muito tempo para entendê-los, só estamos exibindo aqui para que você saiba que eles existem." />
 
-      <h3 className={styles.subtitle} id="opPalavraChave">
+      <h3 className={styles.subtitle} ref={opPalavraChaveRef}>
         Operadores com Palavra-chave
       </h3>
       <p className={styles.p_container}>

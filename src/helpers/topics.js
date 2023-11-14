@@ -41,7 +41,15 @@ const topics = [
   },
   {
     id: 11,
-    name: 'Console'
+    name: 'while'
+  },
+  {
+    id: 12,
+    name: 'for'
+  },
+  {
+    id: 13,
+    name: 'console'
   },
 ];
 

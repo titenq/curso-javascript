@@ -1,3 +1,5 @@
+import { useRef } from 'react';
+
 import { Table } from 'react-bootstrap';
 
 import styles from '../Topics.module.css';
@@ -5,8 +7,20 @@ import CustomTopic from '../CustomTopic';
 import Code from '../../../components/Code';
 import tiposDeDados from '../../../helpers/code/tiposDeDados';
 import Alerta from '../../../components/Alerta';
+import scrollToRef from '../../../helpers/scrollToRef';
 
 const TiposDeDados = () => {
+  const stringRef = useRef(null);
+  const numberRef = useRef(null);
+  const booleanRef = useRef(null);
+  const bigintRef = useRef(null);
+  const symbolRef = useRef(null);
+  const nullRef = useRef(null);
+  const undefinedRef = useRef(null);
+  const arrayRef = useRef(null);
+  const functionRef = useRef(null);
+  const objectRef = useRef(null);
+
   const content = (
     <>
       <Table style={{ maxWidth: "600px" }} striped bordered hover size="sm" variant="dark">
@@ -18,31 +32,81 @@ const TiposDeDados = () => {
         </thead>
         <tbody>
           <tr>
-            <td>string</td>
-            <td>array</td>
+            <td 
+              className={styles.td_title}
+              onClick={() => scrollToRef(stringRef)}
+            >
+              string
+            </td>
+            <td 
+              className={styles.td_title}
+              onClick={() => scrollToRef(arrayRef)}
+            >
+              array
+            </td>
           </tr>
           <tr>
-            <td>number</td>
-            <td>function</td>
+          <td 
+              className={styles.td_title}
+              onClick={() => scrollToRef(numberRef)}
+            >
+              number
+            </td>
+            <td 
+              className={styles.td_title}
+              onClick={() => scrollToRef(functionRef)}
+            >
+              function
+            </td>
           </tr>
           <tr>
-            <td>boolean</td>
-            <td>object</td>
+          <td 
+              className={styles.td_title}
+              onClick={() => scrollToRef(booleanRef)}
+            >
+              boolean
+            </td>
+            <td 
+              className={styles.td_title}
+              onClick={() => scrollToRef(objectRef)}
+            >
+              object
+            </td>
           </tr>
           <tr>
-            <td>bigint</td>
+          <td 
+              className={styles.td_title}
+              onClick={() => scrollToRef(bigintRef)}
+            >
+              bigint
+            </td>
             <td></td>
           </tr>
           <tr>
-            <td>symbol</td>
+          <td 
+              className={styles.td_title}
+              onClick={() => scrollToRef(symbolRef)}
+            >
+              symbol
+            </td>
             <td></td>
           </tr>
           <tr>
-            <td>null</td>
+          <td 
+              className={styles.td_title}
+              onClick={() => scrollToRef(nullRef)}
+            >
+              null
+            </td>
             <td></td>
           </tr>
           <tr>
-            <td>undefined</td>
+          <td 
+              className={styles.td_title}
+              onClick={() => scrollToRef(undefinedRef)}
+            >
+              undefined
+            </td>
             <td></td>
           </tr>
         </tbody>
@@ -50,7 +114,7 @@ const TiposDeDados = () => {
 
       <h2 className={styles.subtitle}>Valores Primitivos:</h2>
 
-      <h3 className={styles.subtitle}>string</h3>
+      <h3 className={styles.subtitle} ref={stringRef}>string</h3>
       <p className={styles.p_container}>
         String é uma sequência de caracteres, como letras, números, caracteres especiais e espaços, que é usada para representar texto, esses caracteres devem estar entre aspas simples ( &apos; ) ou aspas duplas( &quot; ). Uma string pode ter somente um caractere ou até nenhum caractere, chamada de string vazia.
       </p>
@@ -61,7 +125,7 @@ const TiposDeDados = () => {
         message="Note que a variável apartamento recebe o valor &apos;1002&apos; string, que é diferente do valor 1002 number, sempre que um número estiver entre aspas simples ou duplas ele é uma string. Uma dica de quando usar number ou string para representar números é o seguinte, se você não precisar fazer operações matemáticas com esse número, use string, se precisar, use number."
       />
 
-      <h3 className={styles.subtitle}>number</h3>
+      <h3 className={styles.subtitle} ref={numberRef}>number</h3>
       <p className={styles.p_container}>
         O number é um tipo de dado que representa valores numéricos, esses valores podem ser inteiro (números inteiros - int) ou de ponto flutuante (números decimais - float), positivos ou negativos.
       </p>
@@ -106,7 +170,7 @@ const TiposDeDados = () => {
         message="Note que podemos somar 1 ao number maior que o 'Máximo Inteiro Seguro' que o valor será o mesmo e que podemos subtrair 1 ao number menor que o 'Mínimo Inteiro Seguro' que o valor também será o mesmo."
       />
 
-      <h3 className={styles.subtitle}>boolean</h3>
+      <h3 className={styles.subtitle} ref={booleanRef}>boolean</h3>
       <p className={styles.p_container}>
         O boolean é um tipo de dado que pode ter apenas dois valores: <span className="fst-italic">true (verdadeiro)</span> ou <span className="fst-italic">false (falso)</span>. Os booleanos são usados para representar valores verdadeiros ou falsos em lógica de programação, eles são frequentemente usados em estruturas condicionais e loops, para tomar decisões com base em condições.
       </p>
@@ -127,7 +191,7 @@ const TiposDeDados = () => {
         message="Sobre valores booleanos ainda veremos sobre truthy, que são valores avaliados como true no contexto booleano, e sobre falsy, que são valores avaliados com false no contexto booleano. Veremos mais sobre truthy e falsy no tópico sobre Estruturas Condicionais com if"
       />
 
-      <h3 className={styles.subtitle}>bigint</h3>
+      <h3 className={styles.subtitle} ref={bigintRef}>bigint</h3>
       <p className={styles.p_container}>
         O bigint é um tipo de dado que representa números inteiros que podem ser muito grandes, maior do que o inteiro maior suportado pelo tipo int, no entanto podemos utilizar valores menores como bigint.
       </p>
@@ -142,7 +206,7 @@ const TiposDeDados = () => {
 
       <Code codeString={tiposDeDados['10']} />
 
-      <h3 className={styles.subtitle}>symbol</h3>
+      <h3 className={styles.subtitle} ref={symbolRef}>symbol</h3>
       <p className={styles.p_container}>
         O symbol é um tipo de dado que representa um valor único e imutável, cada symbol é único, o que significa que dois symbol nunca serão iguais, mesmo que tenham o mesmo valor.
       </p>
@@ -153,14 +217,14 @@ const TiposDeDados = () => {
         message="O symbol raramente é usado, principalmente por iniciantes, portanto não precisa utilizar muito tempo para aprender sobre o symbol."
       />
 
-      <h3 className={styles.subtitle}>null</h3>
+      <h3 className={styles.subtitle} ref={nullRef}>null</h3>
       <p className={styles.p_container}>
         O null é um tipo de dado que representa a ausência de valor em uma variável. Quando uma variável é inicializada com null, isso indica que nenhum valor válido foi atribuído a ela.
       </p>
 
       <Code codeString={tiposDeDados['12']} />
 
-      <h3 className={styles.subtitle}>undefined</h3>
+      <h3 className={styles.subtitle} ref={undefinedRef}>undefined</h3>
       <p className={styles.p_container}>
         O undefined é um tipo de dado que representa uma variável que foi declarada, mas ainda não recebeu um valor.
       </p>
@@ -191,7 +255,7 @@ const TiposDeDados = () => {
 
       <Code codeString={tiposDeDados['14']} />
 
-      <h3 className={styles.subtitle}>array</h3>
+      <h3 className={styles.subtitle} ref={arrayRef}>array</h3>
       <p className={styles.p_container}>
         Array é uma coleção de valores, ou seja, numa mesma variável você pode ter nenhum valor, um valor ou vários valores.
       </p>
@@ -224,7 +288,7 @@ const TiposDeDados = () => {
 
       <Code codeString={tiposDeDados['18']} />
 
-      <h3 className={styles.subtitle}>function</h3>
+      <h3 className={styles.subtitle} ref={functionRef}>function</h3>
       <p className={styles.p_container}>
         Uma função em Javascript é um bloco de código reutilizável que realiza uma tarefa específica. As funções podem aceitar argumentos, realizar cálculos, executar ações e retornar valores. Elas são essenciais para organizar e reutilizar o código em seus programas.
       </p>
@@ -263,7 +327,7 @@ const TiposDeDados = () => {
         message="A definição de uma função somente cria a função, para utilizar a função ela tem que ser invocada, soma(8, 10). Na definição da função podemos criar os parâmetros, nesse exemplo, num1 e num2, e ao invocar a função passamos os argumentos, nesse exemplo, 8 e 10."
       />
 
-      <h3 className={styles.subtitle}>object</h3>
+      <h3 className={styles.subtitle} ref={objectRef}>object</h3>
       <p className={styles.p_container}>
         Objeto é um tipo de dado que pode armazenar várias informações relacionadas, essas informações são organizadas em pares (chave: valor), onde cada chave é uma propriedade do objeto, como se fosse uma variável dentro do objeto, que recebe um valor que pode ser qualquer tipo de dado, inclusive outro objeto. 
       </p>

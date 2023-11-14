@@ -11,13 +11,17 @@ import useTopicPagination from '../../../hooks/useTopicPagination';
 const CustomTopic = props => {
   const { topicPrevious, topicNext, topicTitle } = useTopicPagination(topics);
   const topRef = useRef(null);
+
+  const handleScroll = e => {
+    console.log(e.currentTarget.scrollTop);
+  };
   
   const scrollToTop = () => {
     topRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <Container className={styles.container} ref={topRef}>
+    <Container className={styles.container} ref={topRef} onScroll={e => handleScroll(e)} style={{ height: props.height, overflow: 'auto' }} >
       <h1 className={styles.title}>{topicTitle}</h1>
 
       {props.content}
