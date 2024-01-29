@@ -59,6 +59,10 @@ const topics = [
     id: 15,
     name: 'length'
   },
+  {
+    id: 16,
+    name: 'Métodos de String'
+  },
 ];
 
 export default topics;

@@ -1,8 +1,8 @@
-const numeros = [1, 2, 3];
-numeros.length = 5;
+const estrela = '★';
+const emoji = '😂'; 
 
-console.log(numeros); // [ 1, 2, 3, undefined, undefined ]
+const estrelaCodePoint = estrela.codePointAt(0);
+const emojiCodePoint = emoji.codePointAt(0);
 
-numeros.length = 2;
-
-console.log(numeros); // [ 1, 2 ]
+console.log(estrelaCodePoint); // 9733
+console.log(emojiCodePoint); // 128514
