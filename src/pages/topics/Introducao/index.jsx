@@ -7,7 +7,7 @@ const Introducao = () => {
   const content = (
     <>
       <p className={styles.p_container}>
-        Nesse pequeno tutorial eu vou tentar passar alguns conhecimentos básicos sobre a linguagem de programação Javascript.
+        Nesse pequeno tutorial tentaremos passar alguns conhecimentos básicos sobre a linguagem de programação Javascript.
       </p>
 
       <p className={styles.p_container}>
