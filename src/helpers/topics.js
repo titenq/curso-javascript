@@ -61,6 +61,10 @@ const topics = [
   },
   {
     id: 16,
+    name: 'Template Strings'
+  },
+  {
+    id: 17,
     name: 'Métodos de String'
   },
 ];

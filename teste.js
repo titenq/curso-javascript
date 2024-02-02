@@ -1,8 +1,8 @@
-const estrela = '★';
-const emoji = '😂'; 
-
-const estrelaCodePoint = estrela.codePointAt(0);
-const emojiCodePoint = emoji.codePointAt(0);
-
-console.log(estrelaCodePoint); // 9733
-console.log(emojiCodePoint); // 128514
+const string = 'string com tamanho 21';
+console.log(string.indexOf('')); // 0
+console.log(string.indexOf('', 1)); // 1
+console.log(string.indexOf('', 10)); // 10
+console.log(string.indexOf('', 20)); // 20
+console.log(string.indexOf('', 21)); // 21
+console.log(string.indexOf('', 30)); // 21
+console.log(string.indexOf('', 50)); // 21

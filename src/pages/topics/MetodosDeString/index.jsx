@@ -170,6 +170,96 @@ const MetodosDeString = () => {
       <Alerta
         message="O codePointAt() raramente é usado, principalmente por iniciantes, portanto não precisa utilizar muito tempo para aprendê-lo."
       />
+
+      <h3 className={styles.subtitle} ref={concatRef}>concat()</h3>
+
+      <p className={styles.p_container}>
+        O método <span className={styles.code}>concat()</span> combina, junta, concatena, uma ou mais <span className={styles.code}>strings</span>, e retorna uma nova <span className={styles.code}>string</span> concatenada.
+      </p>
+
+      <Code codeString={metodosDeString["05"]} />
+
+      <Alerta
+        message="O concat() tem uma performance ruim em relação ao operador + e em relação a template strings."
+      />
+
+      <h3 className={styles.subtitle} ref={endsWithRef}>endsWith()</h3>
+
+      <p className={styles.p_container}>
+        O método <span className={styles.code}>endsWith()</span> verifica se uma <span className={styles.code}>string</span> termina com determinados caracteres, que são passados como parâmetro, retornando <span className={styles.code}>true</span> ou <span className={styles.code}>false</span>.
+      </p>
+
+      <p className={styles.p_container}>
+        O método <span className={styles.code}>endsWith()</span> pode receber um segundo parâmetro, opcional, que substitui o tamanho da <span className={styles.code}>string </span> original, somente para a verificação, para o valor passado como argumento.
+      </p>
+
+      <Code codeString={metodosDeString["06"]} />
+
+      <h3 className={styles.subtitle} ref={fromCharCodeRef}>fromCharCode()</h3>
+
+      <p className={styles.p_container}>
+        O método <span className={styles.code}>fromCharCode()</span>, diferente dos métodos vistos anteriormente, é um método estático do objeto <span className={styles.code}>String</span>, portanto deve ser invocado a partir do objeto <span className={styles.code}>String</span>.
+      </p>
+
+      <p className={styles.p_container}>
+        O método <span className={styles.code}>fromCharCode()</span> recebe um ou mais argumentos, números de 0 a 65535, de até 16 bits, e retorna o caractere <span className={styles.code}>Unicode</span> correspondente.
+      </p>
+
+      <Code codeString={metodosDeString["07"]} />
+
+      <Alerta
+        message="O fromCharCode() raramente é usado, principalmente por iniciantes, portanto não precisa utilizar muito tempo para aprendê-lo."
+      />
+
+      <h3 className={styles.subtitle} ref={fromCodePointRef}>fromCodePoint()</h3>
+
+      <p className={styles.p_container}>
+        O método <span className={styles.code}>fromCodePoint()</span> também é um método estático do objeto <span className={styles.code}>String</span>, portanto deve ser invocado a partir do objeto <span className={styles.code}>String</span>.
+      </p>
+
+      <p className={styles.p_container}>
+        O método <span className={styles.code}>fromCodePoint()</span> tem o mesmo propósito do método <span className={styles.code}>fromCharCode()</span>, a diferença é que ele pode receber códigos <span className={styles.code}>Unicode</span> de até 32 bits.
+      </p>
+
+      <Code codeString={metodosDeString["08"]} />
+
+      <Alerta
+        message="O fromCodePoint() raramente é usado, principalmente por iniciantes, portanto não precisa utilizar muito tempo para aprendê-lo."
+      />
+
+      <h3 className={styles.subtitle} ref={includesRef}>includes()</h3>
+
+      <p className={styles.p_container}>
+        O método <span className={styles.code}>includes()</span> verifica se uma <span className={styles.code}>string</span> contém outra <span className={styles.code}>string</span>, ou seja, se uma <span className={styles.code}>string</span> pode ser encontrada dentro de outra <span className={styles.code}>string</span>.
+      </p>
+
+      <p className={styles.p_container}>
+        Se a <span className={styles.code}>string</span> procurada for encontrada dentro da <span className={styles.code}>string</span> original, o método <span className={styles.code}>includes()</span> retorna <span className={styles.code}>true</span>, senão, retorna <span className={styles.code}>false</span>.
+      </p>
+
+      <p className={styles.p_container}>
+        O método <span className={styles.code}>includes()</span> recebe o primeiro argumento que é a <span className={styles.code}>string</span> a ser pesquisada, e pode receber um segundo argumento, opcional, que é o índice a partir do qual a busca deve ser iniciada na <span className={styles.code}>string</span> original, lembrando que o índice começa por 0 e que o método <span className={styles.code}>includes()</span> é <span className={styles.code}>case sensitive()</span>.
+      </p>
+
+      <Code codeString={metodosDeString["09"]} />
+
+      <h3 className={styles.subtitle} ref={indexOfRef}>indexOf()</h3>
+
+      <p className={styles.p_container}>
+        O método <span className={styles.code}>indexOf()</span> retorna o índice da primeira ocorrência da <span className={styles.code}>string</span> passada como argumento na <span className={styles.code}>string</span> original, lembrando que o índice começa por 0. Se a <span className={styles.code}>string</span> não for encontrada, será retornado -1.
+      </p>
+
+      <p className={styles.p_container}>
+        O método <span className={styles.code}>indexOf()</span> pode receber um segundo argumento, opcional, que é um número inteiro representando o índice onde a busca deve começar.
+      </p>
+
+      <Code codeString={metodosDeString["10"]} />
+      
+      <p className={styles.p_container}>
+        Se a <span className={styles.code}>string</span> passada como primeiro argumento for uma <span className={styles.code}>string</span> vazia, <span className={styles.code}>{''}</span>, se o segundo argumento for menor que o tamanho da <span className={styles.code}>string</span> o retorno será o valor do segundo argumento e se o segundo argumento for igual ou maior que o tamanho da <span className={styles.code}>string</span>, o retorno será o tamanho da <span className={styles.code}>string</span>.
+      </p>
+
+      <Code codeString={metodosDeString["11"]} />
     </>
   );
 
