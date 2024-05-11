@@ -1,7 +1,7 @@
 .navbar {
   background-color: #F8DC3E;
   height: 60px;
-  z-index: 2000;
+  z-index: 9999;
 }
 
 .logo_header {
@@ -9,22 +9,6 @@
   height: 50px;
   cursor: pointer;
   box-shadow: 0px 0px 5px 0px #263238;
-}
-
-.font {
-  font-size: 18px;
-  font-weight: 500;
-}
-
-.links {
-  color: #263238;
-  text-decoration: none;
-  margin-left: 15px;
-  transition: all 0.3s ease-in-out;
-}
-
-.links:hover {
-  color: #37474f;
 }
 
 .sis {
@@ -35,140 +19,19 @@
   cursor: pointer;
 }
 
-.avatar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  margin-left: 40px;
-  font-size: 16px;
-  font-weight: bold;
-  border: 2px solid #fff; 
-  color: #fff;
-  border-radius: 50%;
-}
-
-button,
-button:focus,
-button:active {
-  outline: none !important;
-  border-color: transparent !important;
-  box-shadow: none !important;
-}
-
-@media screen and (max-width: 1200px) {
-  .logo_header {
-    width: 50px;
-    height: 50px;
+@media screen and (max-width: 450px) {
+  .navbar {
+    height: 40px;
   }
 
   .sis {
-    font-size: 20px;
-    margin-left: 20px;
-  }
-
-  .links {
-    font-size: 16px;
-  }
-}
-
-@media screen and (max-width: 990px) {
-  .avatar {
-    position: absolute;
-    top: 25px;
-    right: 50px;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .avatar {
-    right: 30px;
-  }
-}
-
-@media screen and (max-width: 850px) {
-  .avatar {
-    right: 20px;
-  }
-}
-
-@media screen and (max-width: 820px) {
-  .avatar {
-    right: 120px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .avatar {
-    right: 50px;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .avatar {
-    right: 20px;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .avatar {
-    right: 120px;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .avatar {
-    top: 15px;
-  }
-}
-
-@media screen and (max-width: 370px) {
-  .avatar {
-    right: 90px;
-  }
-}
-
-@media screen and (max-width: 330px) {
-  .avatar {
-    right: 70px;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .logo_header {
-    width: 100px;
-    height: 45px;
-  }
-
-  .sis {
+    color: #263238;
     font-size: 18px;
     margin-left: 10px;
   }
-}
-
-@media screen and (max-width: 350px) {
-  .avatar {
-    margin-left: 10px;
-  }
-}
-
-@media screen and (max-width: 317px) {
-  .avatar {
-    margin-left: 5px;
-    width: 30px;
-    height: 30px;
-    font-size: 12px;
-  }
-
-  .sis {
-    font-size: 17px;
-    margin-left: 10px;
-  }
 
   .logo_header {
-    width: 80px;
-    height: 35px;
-    padding: 5px;
+    width: 30px;
+    height: 30px;
   }
 }
