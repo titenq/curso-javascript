@@ -15,17 +15,27 @@ const PalavrasChaveTable = () => {
   }
 
   return (
-    <Table style={{ maxWidth: "600px" }} striped bordered hover size="sm" variant="dark">
-      <tbody>
-        {chunks.map((chunk, rowIndex) => (
-          <tr key={rowIndex}>
-            {chunk.map((keyword, colIndex) => (
-              <td key={colIndex}><span className="fst-italic">{keyword}</span></td>
-            ))}
-          </tr>
-        ))}
-      </tbody>
-    </Table>
+    <div style={
+      {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        width: "100%",
+        overflowX: "auto"
+      }
+    }>
+      <Table style={{ maxWidth: "600px" }} striped bordered hover size="sm" variant="dark">
+        <tbody>
+          {chunks.map((chunk, rowIndex) => (
+            <tr key={rowIndex}>
+              {chunk.map((keyword, colIndex) => (
+                <td key={colIndex}><span className="fst-italic">{keyword}</span></td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+    </div>
   );
 };
 

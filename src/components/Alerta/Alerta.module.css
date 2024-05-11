@@ -1,6 +1,6 @@
 .alerta {
-  width: 600px !important; 
-  background-color: #F8DC3E !important;
-  color: #263238 !important;
-  border-left: 8px solid #b19702 !important;
+  width: 100%; 
+  background-color: #F8DC3E;
+  color: #263238;
+  border-left: 8px solid #b19702;
 }

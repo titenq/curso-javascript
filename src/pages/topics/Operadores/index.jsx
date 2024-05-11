@@ -36,365 +36,375 @@ const Operadores = () => {
         atribuições.
       </p>
 
-      <Table
-        style={{ maxWidth: "700px" }}
-        striped
-        bordered
-        hover
-        size="sm"
-        variant="dark"
-      >
-        <tbody>
-          <tr>
-            <td
-              className={styles.td_title}
-              onClick={() => scrollToRef(opAritmeticosRef)}
-            >
-              Operadores Aritméticos
-            </td>
-            <OverlayTrigger placement="top" overlay={tooltip("+ (adição)")}>
-              <td className={styles.code}>+</td>
-            </OverlayTrigger>
-            <OverlayTrigger placement="top" overlay={tooltip("- (subtração)")}>
-              <td className={styles.code}>-</td>
-            </OverlayTrigger>
-            <OverlayTrigger
-              placement="top"
-              overlay={tooltip("* (multiplicação)")}
-            >
-              <td className={styles.code}>*</td>
-            </OverlayTrigger>
-            <OverlayTrigger placement="top" overlay={tooltip("/ (divisão)")}>
-              <td className={styles.code}>/</td>
-            </OverlayTrigger>
-            <OverlayTrigger
-              placement="top"
-              overlay={tooltip("% (módulo, resto da divisão)")}
-            >
-              <td className={styles.code}>%</td>
-            </OverlayTrigger>
-            <OverlayTrigger
-              placement="top"
-              overlay={tooltip("** (exponenciação)")}
-            >
-              <td className={styles.code}>**</td>
-            </OverlayTrigger>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-          </tr>
-          <tr>
-            <td
-              className={styles.td_title}
-              onClick={() => scrollToRef(opAtribuicaoRef)}
-            >
-              Operadores de Atribuição
-            </td>
-            <OverlayTrigger placement="top" overlay={tooltip("= (atribuição)")}>
-              <td className={styles.code}>=</td>
-            </OverlayTrigger>
-            <OverlayTrigger
-              placement="top"
-              overlay={tooltip("+= (atribuição de adição)")}
-            >
-              <td className={styles.code}>+=</td>
-            </OverlayTrigger>
-            <OverlayTrigger
-              placement="top"
-              overlay={tooltip("-= (atribuição de subtração)")}
-            >
-              <td className={styles.code}>-=</td>
-            </OverlayTrigger>
-            <OverlayTrigger
-              placement="top"
-              overlay={tooltip("*= (atribuição de multiplicação)")}
-            >
-              <td className={styles.code}>*=</td>
-            </OverlayTrigger>
-            <OverlayTrigger
-              placement="top"
-              overlay={tooltip("/= (atribuição de divisão)")}
-            >
-              <td className={styles.code}>/=</td>
-            </OverlayTrigger>
-            <OverlayTrigger
-              placement="top"
-              overlay={tooltip("%= (atribuição de módulo)")}
-            >
-              <td className={styles.code}>%=</td>
-            </OverlayTrigger>
-            <OverlayTrigger
-              placement="top"
-              overlay={tooltip("**= (atribuição de exponenciação)")}
-            >
-              <td className={styles.code}>**=</td>
-            </OverlayTrigger>
-            <td className={styles.code}></td>
-          </tr>
-          <tr>
-            <td
-              className={styles.td_title}
-              onClick={() => scrollToRef(opComparacaoRef)}
-            >
-              Operadores de Comparação
-            </td>
-            <OverlayTrigger placement="top" overlay={tooltip("== (igualdade)")}>
-              <td className={styles.code}>==</td>
-            </OverlayTrigger>
-            <OverlayTrigger
-              placement="top"
-              overlay={tooltip("=== (igualdade estrita)")}
-            >
-              <td className={styles.code}>===</td>
-            </OverlayTrigger>
-            <OverlayTrigger placement="top" overlay={tooltip("!= (diferença)")}>
-              <td className={styles.code}>!=</td>
-            </OverlayTrigger>
-            <OverlayTrigger
-              placement="top"
-              overlay={tooltip("!== (diferença estrita)")}
-            >
-              <td className={styles.code}>!==</td>
-            </OverlayTrigger>
-            <OverlayTrigger placement="top" overlay={tooltip("> (maior que)")}>
-              <td className={styles.code}>{">"}</td>
-            </OverlayTrigger>
-            <OverlayTrigger placement="top" overlay={tooltip("< (menor que)")}>
-              <td className={styles.code}>{"<"}</td>
-            </OverlayTrigger>
-            <OverlayTrigger
-              placement="top"
-              overlay={tooltip(">= (maior ou igual a)")}
-            >
-              <td className={styles.code}>{">="}</td>
-            </OverlayTrigger>
-            <OverlayTrigger
-              placement="top"
-              overlay={tooltip("<= (menor ou igual a)")}
-            >
-              <td className={styles.code}>{"<="}</td>
-            </OverlayTrigger>
-          </tr>
-          <tr>
-            <td
-              className={styles.td_title}
-              onClick={() => scrollToRef(opLogicosRef)}
-            >
-              Operadores Lógicos
-            </td>
-            <OverlayTrigger placement="top" overlay={tooltip("&& (e lógico)")}>
-              <td className={styles.code}>&&</td>
-            </OverlayTrigger>
-            <OverlayTrigger placement="top" overlay={tooltip("|| (ou lógico)")}>
-              <td className={styles.code}>||</td>
-            </OverlayTrigger>
-            <OverlayTrigger placement="top" overlay={tooltip("! (não lógico)")}>
-              <td className={styles.code}>!</td>
-            </OverlayTrigger>
-            <OverlayTrigger placement="top" overlay={tooltip("?? (nullish coalescing)")}>
-              <td className={styles.code}>??</td>
-            </OverlayTrigger>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-          </tr>
-          <tr>
-            <td
-              className={styles.td_title}
-              onClick={() => scrollToRef(opIncrementoDecrementoRef)}
-            >
-              Operadores de Incremento e Decremento
-            </td>
-            <OverlayTrigger
-              placement="top"
-              overlay={tooltip("++ (incremento)")}
-            >
-              <td className={styles.code}>++</td>
-            </OverlayTrigger>
-            <OverlayTrigger
-              placement="top"
-              overlay={tooltip("-- (decremento)")}
-            >
-              <td className={styles.code}>--</td>
-            </OverlayTrigger>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-          </tr>
-          <tr>
-            <td
-              className={styles.td_title}
-              onClick={() => scrollToRef(opConcatenacaoRef)}
-            >
-              Operador de Concatenação
-            </td>
-            <OverlayTrigger
-              placement="top"
-              overlay={tooltip("+ (concatenação de strings)")}
-            >
-              <td className={styles.code}>+</td>
-            </OverlayTrigger>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-          </tr>
-          <tr>
-            <td
-              className={styles.td_title}
-              onClick={() => scrollToRef(opBitwiseRef)}
-            >
-              Operadores Bitwise
-            </td>
-            <OverlayTrigger placement="top" overlay={tooltip("& (E bitwise)")}>
-              <td className={styles.code}>&</td>
-            </OverlayTrigger>
-            <OverlayTrigger placement="top" overlay={tooltip("| (Ou bitwise)")}>
-              <td className={styles.code}>|</td>
-            </OverlayTrigger>
-            <OverlayTrigger
-              placement="top"
-              overlay={tooltip("^ (Ou exclusivo bitwise)")}
-            >
-              <td className={styles.code}>^</td>
-            </OverlayTrigger>
-            <OverlayTrigger
-              placement="top"
-              overlay={tooltip("~ (Negação bitwise)")}
-            >
-              <td className={styles.code}>~</td>
-            </OverlayTrigger>
-            <OverlayTrigger
-              placement="top"
-              overlay={tooltip("<< (Shift à esquerda)")}
-            >
-              <td className={styles.code}>{"<<"}</td>
-            </OverlayTrigger>
-            <OverlayTrigger
-              placement="top"
-              overlay={tooltip(">> (Shift à direita)")}
-            >
-              <td className={styles.code}>{">>"}</td>
-            </OverlayTrigger>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-          </tr>
-          <tr>
-            <td
-              className={styles.td_title}
-              onClick={() => scrollToRef(opTernarioRef)}
-            >
-              Operador Ternário
-            </td>
-            <OverlayTrigger
-              placement="top"
-              overlay={tooltip("? \u00A0 : \u00A0 (ternário)")}
-            >
-              <td className={styles.code}>? :</td>
-            </OverlayTrigger>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-          </tr>
-          <tr>
-            <td
-              className={styles.td_title}
-              onClick={() => scrollToRef(opAcessoPropsRef)}
-            >
-              Operadores de Acesso a Propriedades
-            </td>
-            <OverlayTrigger
-              placement="top"
-              overlay={tooltip(". \u00A0(ponto)")}
-            >
-              <td className={styles.code}>.</td>
-            </OverlayTrigger>
-            <OverlayTrigger
-              placement="top"
-              overlay={tooltip("[\u00A0\u00A0] (colchetes)")}
-            >
-              <td className={styles.code}>[ ]</td>
-            </OverlayTrigger>
-            <OverlayTrigger
-              placement="top"
-              overlay={tooltip("?.(optional chaining)")}
-            >
-              <td className={styles.code}>?.</td>
-            </OverlayTrigger>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-          </tr>
-          <tr>
-            <td
-              className={styles.td_title}
-              onClick={() => scrollToRef(opVirgulaRef)}
-            >
-              Operador de Vírgula
-            </td>
-            <OverlayTrigger
-              placement="top"
-              overlay={tooltip(", (retorna a última expressão)")}
-            >
-              <td className={styles.code}>,</td>
-            </OverlayTrigger>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-          </tr>
-          <tr>
-            <td
-              className={styles.td_title}
-              onClick={() => scrollToRef(opPalavraChaveRef)}
-            >
-              Operadores com Palavra-Chave
-            </td>
-            <OverlayTrigger
-              placement="top"
-              overlay={tooltip("typeof (retorna o tipo de um valor)")}
-            >
-              <td className={styles.code}>typeof</td>
-            </OverlayTrigger>
-            <OverlayTrigger
-              placement="top"
-              overlay={tooltip(
-                "instanceof (verifica se um objeto é uma instância de uma classe ou construtor)"
-              )}
-            >
-              <td className={styles.code}>instanceof</td>
-            </OverlayTrigger>
-            <OverlayTrigger
-              placement="top"
-              overlay={tooltip(
-                "delete (remove propriedade de objeto ou elemento de array)"
-              )}
-            >
-              <td className={styles.code}>delete</td>
-            </OverlayTrigger>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-            <td className={styles.code}></td>
-          </tr>
-        </tbody>
-      </Table>
+      <div style={
+        {
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "100%",
+          overflowX: "auto"
+        }
+      }>
+        <Table
+          style={{ maxWidth: "700px" }}
+          striped
+          bordered
+          hover
+          size="sm"
+          variant="dark"
+        >
+          <tbody>
+            <tr>
+              <td
+                className={styles.td_title}
+                onClick={() => scrollToRef(opAritmeticosRef)}
+              >
+                Operadores Aritméticos
+              </td>
+              <OverlayTrigger placement="top" overlay={tooltip("+ (adição)")}>
+                <td className={styles.code}>+</td>
+              </OverlayTrigger>
+              <OverlayTrigger placement="top" overlay={tooltip("- (subtração)")}>
+                <td className={styles.code}>-</td>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="top"
+                overlay={tooltip("* (multiplicação)")}
+              >
+                <td className={styles.code}>*</td>
+              </OverlayTrigger>
+              <OverlayTrigger placement="top" overlay={tooltip("/ (divisão)")}>
+                <td className={styles.code}>/</td>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="top"
+                overlay={tooltip("% (módulo, resto da divisão)")}
+              >
+                <td className={styles.code}>%</td>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="top"
+                overlay={tooltip("** (exponenciação)")}
+              >
+                <td className={styles.code}>**</td>
+              </OverlayTrigger>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+            </tr>
+            <tr>
+              <td
+                className={styles.td_title}
+                onClick={() => scrollToRef(opAtribuicaoRef)}
+              >
+                Operadores de Atribuição
+              </td>
+              <OverlayTrigger placement="top" overlay={tooltip("= (atribuição)")}>
+                <td className={styles.code}>=</td>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="top"
+                overlay={tooltip("+= (atribuição de adição)")}
+              >
+                <td className={styles.code}>+=</td>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="top"
+                overlay={tooltip("-= (atribuição de subtração)")}
+              >
+                <td className={styles.code}>-=</td>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="top"
+                overlay={tooltip("*= (atribuição de multiplicação)")}
+              >
+                <td className={styles.code}>*=</td>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="top"
+                overlay={tooltip("/= (atribuição de divisão)")}
+              >
+                <td className={styles.code}>/=</td>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="top"
+                overlay={tooltip("%= (atribuição de módulo)")}
+              >
+                <td className={styles.code}>%=</td>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="top"
+                overlay={tooltip("**= (atribuição de exponenciação)")}
+              >
+                <td className={styles.code}>**=</td>
+              </OverlayTrigger>
+              <td className={styles.code}></td>
+            </tr>
+            <tr>
+              <td
+                className={styles.td_title}
+                onClick={() => scrollToRef(opComparacaoRef)}
+              >
+                Operadores de Comparação
+              </td>
+              <OverlayTrigger placement="top" overlay={tooltip("== (igualdade)")}>
+                <td className={styles.code}>==</td>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="top"
+                overlay={tooltip("=== (igualdade estrita)")}
+              >
+                <td className={styles.code}>===</td>
+              </OverlayTrigger>
+              <OverlayTrigger placement="top" overlay={tooltip("!= (diferença)")}>
+                <td className={styles.code}>!=</td>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="top"
+                overlay={tooltip("!== (diferença estrita)")}
+              >
+                <td className={styles.code}>!==</td>
+              </OverlayTrigger>
+              <OverlayTrigger placement="top" overlay={tooltip("> (maior que)")}>
+                <td className={styles.code}>{">"}</td>
+              </OverlayTrigger>
+              <OverlayTrigger placement="top" overlay={tooltip("< (menor que)")}>
+                <td className={styles.code}>{"<"}</td>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="top"
+                overlay={tooltip(">= (maior ou igual a)")}
+              >
+                <td className={styles.code}>{">="}</td>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="top"
+                overlay={tooltip("<= (menor ou igual a)")}
+              >
+                <td className={styles.code}>{"<="}</td>
+              </OverlayTrigger>
+            </tr>
+            <tr>
+              <td
+                className={styles.td_title}
+                onClick={() => scrollToRef(opLogicosRef)}
+              >
+                Operadores Lógicos
+              </td>
+              <OverlayTrigger placement="top" overlay={tooltip("&& (e lógico)")}>
+                <td className={styles.code}>&&</td>
+              </OverlayTrigger>
+              <OverlayTrigger placement="top" overlay={tooltip("|| (ou lógico)")}>
+                <td className={styles.code}>||</td>
+              </OverlayTrigger>
+              <OverlayTrigger placement="top" overlay={tooltip("! (não lógico)")}>
+                <td className={styles.code}>!</td>
+              </OverlayTrigger>
+              <OverlayTrigger placement="top" overlay={tooltip("?? (nullish coalescing)")}>
+                <td className={styles.code}>??</td>
+              </OverlayTrigger>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+            </tr>
+            <tr>
+              <td
+                className={styles.td_title}
+                onClick={() => scrollToRef(opIncrementoDecrementoRef)}
+              >
+                Operadores de Incremento e Decremento
+              </td>
+              <OverlayTrigger
+                placement="top"
+                overlay={tooltip("++ (incremento)")}
+              >
+                <td className={styles.code}>++</td>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="top"
+                overlay={tooltip("-- (decremento)")}
+              >
+                <td className={styles.code}>--</td>
+              </OverlayTrigger>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+            </tr>
+            <tr>
+              <td
+                className={styles.td_title}
+                onClick={() => scrollToRef(opConcatenacaoRef)}
+              >
+                Operador de Concatenação
+              </td>
+              <OverlayTrigger
+                placement="top"
+                overlay={tooltip("+ (concatenação de strings)")}
+              >
+                <td className={styles.code}>+</td>
+              </OverlayTrigger>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+            </tr>
+            <tr>
+              <td
+                className={styles.td_title}
+                onClick={() => scrollToRef(opBitwiseRef)}
+              >
+                Operadores Bitwise
+              </td>
+              <OverlayTrigger placement="top" overlay={tooltip("& (E bitwise)")}>
+                <td className={styles.code}>&</td>
+              </OverlayTrigger>
+              <OverlayTrigger placement="top" overlay={tooltip("| (Ou bitwise)")}>
+                <td className={styles.code}>|</td>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="top"
+                overlay={tooltip("^ (Ou exclusivo bitwise)")}
+              >
+                <td className={styles.code}>^</td>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="top"
+                overlay={tooltip("~ (Negação bitwise)")}
+              >
+                <td className={styles.code}>~</td>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="top"
+                overlay={tooltip("<< (Shift à esquerda)")}
+              >
+                <td className={styles.code}>{"<<"}</td>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="top"
+                overlay={tooltip(">> (Shift à direita)")}
+              >
+                <td className={styles.code}>{">>"}</td>
+              </OverlayTrigger>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+            </tr>
+            <tr>
+              <td
+                className={styles.td_title}
+                onClick={() => scrollToRef(opTernarioRef)}
+              >
+                Operador Ternário
+              </td>
+              <OverlayTrigger
+                placement="top"
+                overlay={tooltip("? \u00A0 : \u00A0 (ternário)")}
+              >
+                <td className={styles.code}>? :</td>
+              </OverlayTrigger>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+            </tr>
+            <tr>
+              <td
+                className={styles.td_title}
+                onClick={() => scrollToRef(opAcessoPropsRef)}
+              >
+                Operadores de Acesso a Propriedades
+              </td>
+              <OverlayTrigger
+                placement="top"
+                overlay={tooltip(". \u00A0(ponto)")}
+              >
+                <td className={styles.code}>.</td>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="top"
+                overlay={tooltip("[\u00A0\u00A0] (colchetes)")}
+              >
+                <td className={styles.code}>[ ]</td>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="top"
+                overlay={tooltip("?.(optional chaining)")}
+              >
+                <td className={styles.code}>?.</td>
+              </OverlayTrigger>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+            </tr>
+            <tr>
+              <td
+                className={styles.td_title}
+                onClick={() => scrollToRef(opVirgulaRef)}
+              >
+                Operador de Vírgula
+              </td>
+              <OverlayTrigger
+                placement="top"
+                overlay={tooltip(", (retorna a última expressão)")}
+              >
+                <td className={styles.code}>,</td>
+              </OverlayTrigger>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+            </tr>
+            <tr>
+              <td
+                className={styles.td_title}
+                onClick={() => scrollToRef(opPalavraChaveRef)}
+              >
+                Operadores com Palavra-Chave
+              </td>
+              <OverlayTrigger
+                placement="top"
+                overlay={tooltip("typeof (retorna o tipo de um valor)")}
+              >
+                <td className={styles.code}>typeof</td>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="top"
+                overlay={tooltip(
+                  "instanceof (verifica se um objeto é uma instância de uma classe ou construtor)"
+                )}
+              >
+                <td className={styles.code}>instanceof</td>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="top"
+                overlay={tooltip(
+                  "delete (remove propriedade de objeto ou elemento de array)"
+                )}
+              >
+                <td className={styles.code}>delete</td>
+              </OverlayTrigger>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+              <td className={styles.code}></td>
+            </tr>
+          </tbody>
+        </Table>
+      </div>
 
       <h3 className={styles.subtitle} ref={opAritmeticosRef}>
         Operadores Aritméticos

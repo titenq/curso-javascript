@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 
+import { Container } from 'react-bootstrap';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { monokaiSublime } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { ToastContainer, Zoom, toast } from 'react-toastify';
@@ -27,7 +28,7 @@ const Code = props => {
   };
 
   return (
-    <>
+    <Container>
       <div className={styles.container}>
         <div className={styles.buttons_container}>
           <div className={styles.button_red}></div>
@@ -66,7 +67,7 @@ const Code = props => {
         theme="dark"
         transition={Zoom}
       />
-    </>
+    </Container>
   );
 };
 

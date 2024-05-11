@@ -96,24 +96,34 @@ const MetodosDeString = () => {
         message="Não perca tempo tentando gravar todos os métodos, se concentre em saber que eles existem e para que servem e estude por demanda, ou seja, quando precisar de uma solução que precise de um desses métodos, você pesquisa por eles."
       />
 
-      <Table style={{ maxWidth: "600px" }} striped bordered hover size="sm" variant="dark">
-        <tbody>
-          {metodosString.map((item, index) => (
-            index % 5 === 0 ? (
-              <tr key={`row-${index / 5}`}>
-                {[...Array(5)].map((_, innerIndex) => (
-                  <TdRef
-                    key={metodosString[index + innerIndex].text}
-                    tdText={metodosString[index + innerIndex].text}
-                    tdRef={refs[metodosString[index + innerIndex].ref]}
-                    tdScroll={scrollToRef}
-                  />
-                ))}
-              </tr>
-            ) : null
-          ))}
-        </tbody>
-      </Table>
+      <div style={
+        {
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "100%",
+          overflowX: "auto"
+        }
+      }>
+        <Table style={{ maxWidth: "600px" }} striped bordered hover size="sm" variant="dark">
+          <tbody>
+            {metodosString.map((item, index) => (
+              index % 5 === 0 ? (
+                <tr key={`row-${index / 5}`}>
+                  {[...Array(5)].map((_, innerIndex) => (
+                    <TdRef
+                      key={metodosString[index + innerIndex].text}
+                      tdText={metodosString[index + innerIndex].text}
+                      tdRef={refs[metodosString[index + innerIndex].ref]}
+                      tdScroll={scrollToRef}
+                    />
+                  ))}
+                </tr>
+              ) : null
+            ))}
+          </tbody>
+        </Table>
+      </div>
 
       <h3 className={styles.subtitle} ref={atRef}>at()</h3>
 

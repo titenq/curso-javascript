@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import { Image } from 'react-bootstrap';
+import { Container, Image } from 'react-bootstrap';
 
 import styles from '../Topics.module.css';
 import chrome from '../../../assets/img/baixar-chrome.png';
@@ -16,7 +16,7 @@ import CustomTopic from '../CustomTopic';
 
 const AmbienteDeDesenvolvimento = () => {
   const content = (
-    <>
+    <Container>
       <p className={styles.p_container}>
         Ambiente de desenvolvimento <span className="fst-italic">(development environment)</span> é o conjunto de ferramentas, recursos e configurações que um programador utiliza para escrever e testar o código JavaScript de maneira eficaz.
       </p>
@@ -34,28 +34,20 @@ const AmbienteDeDesenvolvimento = () => {
 
         <Link to="https://www.google.com/intl/pt-BR/chrome" target="_blank" rel="noopener noreferrer">
           <span className="fst-italic text-decoration-underline">Google Chrome</span>
-          
-          <Image
-            src={chrome}
-            fluid
-            className={styles.img}
-          />
         </Link>
       </p>
+
+      <Image src={chrome} fluid className={styles.img} />
 
       <p className={styles.p_container}>
         Editor de Código: {' '}
 
         <Link to="https://code.visualstudio.com/download" target="_blank" rel="noopener noreferrer">
           <span className="fst-italic text-decoration-underline">Visual Studio Code</span>
-          
-          <Image
-            src={vscode}
-            fluid
-            className={styles.img}
-          />
         </Link>
       </p>
+      
+      <Image src={vscode} fluid className={styles.img} />
 
       <p className={styles.p_container}>
         Na instalação, nessa tela, marque todas as opções:
@@ -143,7 +135,7 @@ const AmbienteDeDesenvolvimento = () => {
       <p className={styles.p_container}>
         Nos próximos tópicos explicaremos as funcionalidades das extensões instaladas.
       </p>
-    </>
+    </Container>
   );
 
   return (

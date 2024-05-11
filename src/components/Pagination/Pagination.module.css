@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 700px;
+  width: 100%;
   margin: 30px 0;
 }
 
@@ -26,4 +26,22 @@
 
 .transparent {
   display: hidden;
+}
+
+@media screen and (max-width: 670px) {
+  .button_page {
+    min-width: 100px;
+    min-height: 50px;
+  }
+
+  .topic {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .button_page {
+    min-width: 100px;
+    min-height: 50px;
+  }
 }
