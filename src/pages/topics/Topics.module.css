@@ -108,3 +108,33 @@ kbd {
     padding: 4px 10px;
   }
 }
+
+@media screen and (max-width: 570px) {
+  .td_title {
+    font-size: 12px;
+  }
+
+  .code {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .td_title {
+    font-size: 10px;
+  }
+
+  .code {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .td_title {
+    font-size: 8px;
+  }
+
+  .code {
+    font-size: 7px;
+  }
+}

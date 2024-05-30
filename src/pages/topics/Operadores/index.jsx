@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 
-import { OverlayTrigger, Table, Tooltip } from 'react-bootstrap';
+import { OverlayTrigger, Table, Tooltip, Container } from 'react-bootstrap';
 
 import styles from '../Topics.module.css';
 import CustomTopic from '../CustomTopic';
@@ -36,13 +36,12 @@ const Operadores = () => {
         atribuições.
       </p>
 
-      <div style={
+      <Container style={
         {
           display: "flex",
-          alignItems: "center",
           justifyContent: "center",
           width: "100%",
-          overflowX: "auto"
+          overflowX: "auto",
         }
       }>
         <Table
@@ -404,7 +403,7 @@ const Operadores = () => {
             </tr>
           </tbody>
         </Table>
-      </div>
+      </Container>
 
       <h3 className={styles.subtitle} ref={opAritmeticosRef}>
         Operadores Aritméticos
