@@ -145,6 +145,29 @@ console.log(string.lastIndexOf('', 21)); // 21
 console.log(string.lastIndexOf('', 30)); // 21
 console.log(string.lastIndexOf('', 50)); // 21
 `,
+
+  '14':
+`const nome1 = 'João';
+const nome2 = 'Pedro';
+
+console.log(nome1.localeCompare(nome2)); // -1
+`,
+
+  '15':
+`const nome1 = 'João';
+const nome2 = 'joao';
+
+console.log(nome1.localeCompare(nome2)); // 1
+console.log(nome1.localeCompare(nome2, 'pt-BR', { sensitivity: 'base' })); // 0
+console.log(nome1.localeCompare(nome2, 'pt-BR', { sensitivity: 'accent' })); // 1
+console.log(nome1.localeCompare(nome2, 'pt-BR', { sensitivity: 'case' })); // 1
+
+const palavra1 = 'volt';
+const palavra2 = 'väg';
+
+console.log(palavra1.localeCompare(palavra2, 'en-US')); // 1
+console.log(palavra1.localeCompare(palavra2, 'sv-SE')); // -1
+`,
 };
 
 export default metodosDeString;

@@ -288,6 +288,24 @@ const MetodosDeString = () => {
       </p>
 
       <Code codeString={metodosDeString["13"]} />
+
+      <h3 className={styles.subtitle} ref={localeCompareRef}>localeCompare()</h3>
+
+      <p className={styles.p_container}>
+        O método <span className={styles.code}>localeCompare()</span> compara 2 <span className={styles.code}>strings</span> fazendo a ordenação por ordem alfabética, se a primeira <span className={styles.code}>string</span> for ordenada antes da segunda <span className={styles.code}>string</span> será retornado -1, caso contrário será retornado 1 e se as <span className={styles.code}>strings</span> forem iguais será retornado 0.
+      </p>
+
+      <Code codeString={metodosDeString["14"]} />
+
+      <Alerta
+        message="Em algumas implementações no lugar de -1 será retornado um número negativo e no lugar de 1 será retornado um número positivo."
+      />
+
+      <p className={styles.p_container}>
+        Podemos passar um segundo argumento, opcional, que é o locale para fazer a comparação e um terceiro argumento, opcional, que é um objeto com a chave <span className={styles.code}>sensitivity</span> e com os valores <span className={styles.code}>base</span>, que ignora maiúsculas/minúsculas e acentos, <span className={styles.code}>case</span>, que considera maiúsculas/minúsculas e <span className={styles.code}>accent</span>, que considera acentos.
+      </p>
+
+      <Code codeString={metodosDeString["15"]} />
     </>
   );
 
