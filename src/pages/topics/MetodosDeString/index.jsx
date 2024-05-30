@@ -266,10 +266,28 @@ const MetodosDeString = () => {
       <Code codeString={metodosDeString["10"]} />
       
       <p className={styles.p_container}>
-        Se a <span className={styles.code}>string</span> passada como primeiro argumento for uma <span className={styles.code}>string</span> vazia, <span className={styles.code}>{''}</span>, se o segundo argumento for menor que o tamanho da <span className={styles.code}>string</span> o retorno será o valor do segundo argumento e se o segundo argumento for igual ou maior que o tamanho da <span className={styles.code}>string</span>, o retorno será o tamanho da <span className={styles.code}>string</span>.
+        Se a <span className={styles.code}>string</span> passada como primeiro argumento for uma <span className={styles.code}>string</span> vazia, <span className={styles.code}>&apos;&apos;</span>, o valor retornado será 0, se o segundo argumento for menor que o tamanho da <span className={styles.code}>string</span> o retorno será o valor do segundo argumento e se o segundo argumento for igual ou maior que o tamanho da <span className={styles.code}>string</span>, o retorno será o tamanho da <span className={styles.code}>string</span>.
       </p>
 
       <Code codeString={metodosDeString["11"]} />
+
+      <h3 className={styles.subtitle} ref={lastIndexOfRef}>lastIndexOf()</h3>
+
+      <p className={styles.p_container}>
+        O método <span className={styles.code}>lastIndexOf()</span> retorna o índice da última ocorrência da <span className={styles.code}>string</span> passada como argumento na <span className={styles.code}>string</span> original, lembrando que o índice começa por 0. Se a <span className={styles.code}>string</span> não for encontrada, será retornado -1.
+      </p>
+
+      <p className={styles.p_container}>
+        O método <span className={styles.code}>lastIndexOf()</span> pode receber um segundo argumento, opcional, que é um número inteiro representando o índice onde a busca deve começar mas nesse caso a busca é realizada do final para o início da string.
+      </p>
+
+      <Code codeString={metodosDeString["12"]} />
+
+      <p className={styles.p_container}>
+        Se a <span className={styles.code}>string</span> passada como primeiro argumento for uma <span className={styles.code}>string</span> vazia, <span className={styles.code}>&apos;&apos;</span>, o valor retornado será o tamanho da string, se o segundo argumento for menor que o tamanho da <span className={styles.code}>string</span> o retorno será o valor do segundo argumento e se o segundo argumento for igual ou maior que o tamanho da <span className={styles.code}>string</span>, o retorno será o tamanho da <span className={styles.code}>string</span>.
+      </p>
+
+      <Code codeString={metodosDeString["13"]} />
     </>
   );
 

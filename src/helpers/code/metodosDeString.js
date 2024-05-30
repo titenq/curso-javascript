@@ -116,6 +116,7 @@ console.log(nome.indexOf('Santos')); // -1
 
   '11':
 `const string = 'string com tamanho 21';
+
 console.log(string.indexOf('')); // 0
 console.log(string.indexOf('', 1)); // 1
 console.log(string.indexOf('', 10)); // 10
@@ -123,6 +124,26 @@ console.log(string.indexOf('', 20)); // 20
 console.log(string.indexOf('', 21)); // 21
 console.log(string.indexOf('', 30)); // 21
 console.log(string.indexOf('', 50)); // 21
+`,
+
+  '12':
+`const nome = 'João da Silva';
+
+console.log(nome.lastIndexOf('a')); // 12
+console.log(nome.lastIndexOf('a', 9)); // 6
+console.log(nome.lastIndexOf('A')); // -1
+`,
+
+  '13':
+`const string = 'string com tamanho 21';
+
+console.log(string.lastIndexOf('')); // 21
+console.log(string.lastIndexOf('', 1)); // 1
+console.log(string.lastIndexOf('', 10)); // 10
+console.log(string.lastIndexOf('', 20)); // 20
+console.log(string.lastIndexOf('', 21)); // 21
+console.log(string.lastIndexOf('', 30)); // 21
+console.log(string.lastIndexOf('', 50)); // 21
 `,
 };
 
