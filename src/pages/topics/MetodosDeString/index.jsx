@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 
-import { Table } from 'react-bootstrap';
+import { Table, Container } from 'react-bootstrap';
 
 import styles from '../Topics.module.css';
 import CustomTopic from '../CustomTopic';
@@ -96,16 +96,8 @@ const MetodosDeString = () => {
         message="Não perca tempo tentando gravar todos os métodos, se concentre em saber que eles existem e para que servem e estude por demanda, ou seja, quando precisar de uma solução que precise de um desses métodos, você pesquisa por eles."
       />
 
-      <div style={
-        {
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          width: "100%",
-          overflowX: "auto"
-        }
-      }>
-        <Table style={{ maxWidth: "600px" }} striped bordered hover size="sm" variant="dark">
+      <Container>
+        <Table striped bordered hover size="sm" variant="dark">
           <tbody>
             {metodosString.map((item, index) => (
               index % 5 === 0 ? (
@@ -123,7 +115,7 @@ const MetodosDeString = () => {
             ))}
           </tbody>
         </Table>
-      </div>
+      </Container>
 
       <h3 className={styles.subtitle} ref={atRef}>at()</h3>
 
