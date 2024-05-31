@@ -123,18 +123,10 @@ kbd {
   .td_title {
     font-size: 10px;
   }
-
-  .code {
-    font-size: 8px;
-  }
 }
 
 @media screen and (max-width: 360px) {
   .td_title {
     font-size: 8px;
-  }
-
-  .code {
-    font-size: 7px;
   }
 }
