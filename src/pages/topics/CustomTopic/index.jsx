@@ -2,6 +2,7 @@ import { useRef } from 'react';
 
 import { Container } from 'react-bootstrap';
 import { BsFillArrowUpCircleFill } from 'react-icons/bs';
+import { Helmet } from 'react-helmet';
 
 import styles from '../Topics.module.css';
 import Pagination from '../../../components/Pagination';
@@ -18,6 +19,10 @@ const CustomTopic = props => {
 
   return (
     <Container className={styles.container} ref={topRef} style={{ height: props.height, overflow: 'auto' }} >
+      <Helmet>
+        <title>{topicTitle}</title>
+      </Helmet>
+
       <h1 className={styles.title}>{topicTitle}</h1>
 
       {props.content}
