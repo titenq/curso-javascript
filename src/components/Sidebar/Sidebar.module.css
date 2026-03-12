@@ -6,13 +6,30 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  gap: 8px;
+  gap: 18px;
   z-index: 1;
   height: calc(100vh - var(--header-height));
   background-color: #37474f;
   padding: 72px 15px 15px;
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.section_title {
+  color: #f8dc3e;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0 10px 4px;
+  border-bottom: 1px solid rgba(248, 220, 62, 0.25);
 }
 
 .icon {
@@ -29,13 +46,21 @@
 
 .links {
   font-size: 14px;
-  text-align: center;
+  text-align: left;
   border-bottom: 1px solid #263238;
   display: block;
   width: 100%;
   max-width: 180px;
-  padding: 8px 5px;
+  padding: 8px 10px;
   margin: 0 auto;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.links:hover,
+.active_link {
+  background-color: rgba(248, 220, 62, 0.12);
+  color: #f8dc3e;
 }
 
 .open {

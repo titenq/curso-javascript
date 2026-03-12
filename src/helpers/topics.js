@@ -1,71 +1,88 @@
 const topics = [
   {
     id: 1,
-    name: 'Introdução'
+    name: 'Introdução',
+    section: 'Primeiros Passos'
   },
   {
     id: 2,
-    name: 'Ambiente de Desenvolvimento'
+    name: 'Ambiente de Desenvolvimento',
+    section: 'Primeiros Passos'
   },
   {
     id: 3,
-    name: 'Hello World'
+    name: 'Hello World',
+    section: 'Primeiros Passos'
   },
   {
     id: 4,
-    name: 'Variáveis'
+    name: 'Comentários',
+    section: 'Primeiros Passos'
   },
   {
     id: 5,
-    name: 'Comentários'
+    name: 'Variáveis',
+    section: 'Fundamentos da Linguagem'
   },
   {
     id: 6,
-    name: 'Tipos de Dados'
+    name: 'var let const',
+    section: 'Fundamentos da Linguagem'
   },
   {
     id: 7,
-    name: 'var let const'
+    name: 'Tipos de Dados',
+    section: 'Fundamentos da Linguagem'
   },
   {
     id: 8,
-    name: 'Operadores'
+    name: 'Operadores',
+    section: 'Fundamentos da Linguagem'
   },
   {
     id: 9,
-    name: 'if'
+    name: 'if',
+    section: 'Controle de Fluxo'
   },
   {
     id: 10,
-    name: 'switch'
+    name: 'switch',
+    section: 'Controle de Fluxo'
   },
   {
     id: 11,
-    name: 'while'
+    name: 'while',
+    section: 'Controle de Fluxo'
   },
   {
     id: 12,
-    name: 'for'
+    name: 'for',
+    section: 'Controle de Fluxo'
   },
   {
     id: 13,
-    name: 'for of'
+    name: 'for of',
+    section: 'Controle de Fluxo'
   },
   {
     id: 14,
-    name: 'for in'
+    name: 'for in',
+    section: 'Controle de Fluxo'
   },
   {
     id: 15,
-    name: 'length'
+    name: 'length',
+    section: 'Strings na Prática'
   },
   {
     id: 16,
-    name: 'Template Strings'
+    name: 'Template Strings',
+    section: 'Strings na Prática'
   },
   {
     id: 17,
-    name: 'Métodos de String'
+    name: 'Métodos de String',
+    section: 'Strings na Prática'
   },
 ];
 

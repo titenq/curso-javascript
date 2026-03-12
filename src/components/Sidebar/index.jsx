@@ -31,6 +31,23 @@ const Sidebar = () => {
     }
   };
 
+  const topicSections = topics.reduce((sections, topic) => {
+    const currentSection = sections.find(section => section.title === topic.section);
+
+    if (currentSection) {
+      currentSection.topics.push(topic);
+      
+      return sections;
+    }
+
+    sections.push({
+      title: topic.section,
+      topics: [topic]
+    });
+
+    return sections;
+  }, []);
+
   return (
     <div className={`${styles.sidebar} ${showNav ? styles.open : styles.close}`}>
       <TbCircleArrowLeftFilled 
@@ -41,10 +58,21 @@ const Sidebar = () => {
 
       {showNav && (
         <Nav defaultActiveKey="/" className={styles.nav} >
-          {topics.map(topic => (
-            <NavLink key={topic.id} className={styles.links} to={slug(topic.name)} onClick={handleNavigate}>
-              {topic.name}
-            </NavLink>
+          {topicSections.map(section => (
+            <div key={section.title} className={styles.section}>
+              <p className={styles.section_title}>{section.title}</p>
+
+              {section.topics.map(topic => (
+                <NavLink
+                  key={topic.id}
+                  className={({ isActive }) => `${styles.links} ${isActive ? styles.active_link : ''}`.trim()}
+                  to={slug(topic.name)}
+                  onClick={handleNavigate}
+                >
+                  {topic.name}
+                </NavLink>
+              ))}
+            </div>
           ))}
         </Nav>
       )}
