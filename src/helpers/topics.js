@@ -188,24 +188,30 @@ const topics = [
   },
   {
     id: 35,
+    name: 'Verbos HTTP e HTTP Status',
+    section: 'Dados e APIs',
+    component: 'VerbosHttpEHttpStatus'
+  },
+  {
+    id: 36,
     name: 'Fetch API',
     section: 'Dados e APIs',
     component: 'FetchApi'
   },
   {
-    id: 36,
+    id: 37,
     name: 'Promises',
     section: 'Assincronicidade',
     component: 'Promises'
   },
   {
-    id: 37,
+    id: 38,
     name: 'Async Await',
     section: 'Assincronicidade',
     component: 'AsyncAwait'
   },
   {
-    id: 38,
+    id: 39,
     name: 'For Await',
     section: 'Assincronicidade',
     component: 'ForAwait'
