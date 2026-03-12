@@ -9,6 +9,8 @@
   top: var(--header-height);
   align-self: flex-start;
   height: calc(100vh - var(--header-height));
+  overflow-y: auto;
+  overscroll-behavior: contain;
   background-color: #37474f;
 }
 
@@ -25,6 +27,7 @@
   .sidebar {
     position: static;
     height: auto;
+    overflow: visible;
     background-color: transparent;
   }
 }

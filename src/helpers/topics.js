@@ -36,53 +36,179 @@ const topics = [
   },
   {
     id: 8,
+    name: 'Conversão de Tipos',
+    section: 'Fundamentos da Linguagem',
+    component: 'ConversaoDeTipos'
+  },
+  {
+    id: 9,
     name: 'Operadores',
     section: 'Fundamentos da Linguagem'
   },
   {
-    id: 9,
-    name: 'if',
-    section: 'Controle de Fluxo'
-  },
-  {
     id: 10,
-    name: 'switch',
-    section: 'Controle de Fluxo'
+    name: 'Truthy e Falsy',
+    section: 'Estruturas de Decisão',
+    component: 'TruthyEFalsy'
   },
   {
     id: 11,
-    name: 'while',
-    section: 'Controle de Fluxo'
+    name: 'if',
+    section: 'Estruturas de Decisão'
   },
   {
     id: 12,
-    name: 'for',
-    section: 'Controle de Fluxo'
+    name: 'switch',
+    section: 'Estruturas de Decisão'
   },
   {
     id: 13,
-    name: 'for of',
-    section: 'Controle de Fluxo'
+    name: 'Operador Ternário',
+    section: 'Estruturas de Decisão',
+    component: 'OperadorTernario'
   },
   {
     id: 14,
-    name: 'for in',
-    section: 'Controle de Fluxo'
+    name: 'while',
+    section: 'Estruturas de Repetição'
   },
   {
     id: 15,
-    name: 'length',
-    section: 'Strings na Prática'
+    name: 'for',
+    section: 'Estruturas de Repetição'
   },
   {
     id: 16,
-    name: 'Template Strings',
-    section: 'Strings na Prática'
+    name: 'for of',
+    section: 'Estruturas de Repetição'
   },
   {
     id: 17,
+    name: 'for in',
+    section: 'Estruturas de Repetição'
+  },
+  {
+    id: 18,
+    name: 'Funções',
+    section: 'Funções',
+    component: 'Funcoes'
+  },
+  {
+    id: 19,
+    name: 'Funções de Callback',
+    section: 'Funções',
+    component: 'FuncoesDeCallback'
+  },
+  {
+    id: 20,
+    name: 'Arrays',
+    section: 'Arrays',
+    component: 'Arrays'
+  },
+  {
+    id: 21,
+    name: 'Métodos de Array',
+    section: 'Arrays',
+    component: 'MetodosDeArray'
+  },
+  {
+    id: 22,
+    name: 'Objetos',
+    section: 'Objetos',
+    component: 'Objetos'
+  },
+  {
+    id: 23,
+    name: 'Métodos de Objeto',
+    section: 'Objetos',
+    component: 'MetodosDeObjeto'
+  },
+  {
+    id: 24,
+    name: 'Desestruturação',
+    section: 'Javascript Moderno',
+    component: 'Desestruturacao'
+  },
+  {
+    id: 25,
+    name: 'Spread e Rest',
+    section: 'Javascript Moderno',
+    component: 'SpreadERest'
+  },
+  {
+    id: 26,
+    name: 'Optional Chaining',
+    section: 'Javascript Moderno',
+    component: 'OptionalChaining'
+  },
+  {
+    id: 27,
+    name: 'Nullish Coalescing',
+    section: 'Javascript Moderno',
+    component: 'NullishCoalescing'
+  },
+  {
+    id: 28,
+    name: 'length',
+    section: 'Strings'
+  },
+  {
+    id: 29,
+    name: 'Template Strings',
+    section: 'Strings'
+  },
+  {
+    id: 30,
     name: 'Métodos de String',
-    section: 'Strings na Prática'
+    section: 'Strings'
+  },
+  {
+    id: 31,
+    name: 'JSON',
+    section: 'Dados e APIs',
+    component: 'Json'
+  },
+  {
+    id: 32,
+    name: 'DOM',
+    section: 'DOM e Navegador',
+    component: 'Dom'
+  },
+  {
+    id: 33,
+    name: 'Eventos',
+    section: 'DOM e Navegador',
+    component: 'Eventos'
+  },
+  {
+    id: 34,
+    name: 'Local Storage',
+    section: 'DOM e Navegador',
+    component: 'LocalStorage'
+  },
+  {
+    id: 35,
+    name: 'Fetch API',
+    section: 'Dados e APIs',
+    component: 'FetchApi'
+  },
+  {
+    id: 36,
+    name: 'Promises',
+    section: 'Assincronicidade',
+    component: 'Promises'
+  },
+  {
+    id: 37,
+    name: 'Async Await',
+    section: 'Assincronicidade',
+    component: 'AsyncAwait'
+  },
+  {
+    id: 38,
+    name: 'For Await',
+    section: 'Assincronicidade',
+    component: 'ForAwait'
   },
 ];
 

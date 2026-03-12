@@ -8,10 +8,9 @@
   align-items: stretch;
   gap: 18px;
   z-index: 1;
-  height: calc(100vh - var(--header-height));
+  min-height: 100%;
   background-color: #37474f;
   padding: 72px 15px 15px;
-  overflow-y: auto;
   overflow-x: hidden;
 }
 
@@ -93,8 +92,9 @@
     top: var(--header-height);
     left: 0;
     width: min(82vw, 280px);
-    min-height: calc(100vh - var(--header-height));
+    height: calc(100vh - var(--header-height));
     padding-top: 72px;
+    overflow-y: auto;
     box-shadow: 8px 0 24px rgba(0, 0, 0, 0.35);
   }
 

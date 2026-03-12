@@ -10,11 +10,17 @@ import topics from './helpers/topics';
 import slug from './helpers/slug';
 
 const topicComponents = {};
+const topicModules = import.meta.glob('./pages/topics/*/index.jsx');
 
 topics.forEach(topic => {
-  const pascalCaseName = pascalCase(topic.name);
+  const pascalCaseName = topic.component || pascalCase(topic.name);
+  const modulePath = `./pages/topics/${pascalCaseName}/index.jsx`;
 
-  topicComponents[pascalCaseName] = lazy(() => import(`./pages/topics/${pascalCaseName}/index.jsx`));
+  if (!topicModules[modulePath]) {
+    throw new Error(`Topic component not found: ${modulePath}`);
+  }
+
+  topicComponents[pascalCaseName] = lazy(topicModules[modulePath]);
 });
 
 const App = () => {
@@ -24,7 +30,7 @@ const App = () => {
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           {topics.map(topic => {
-            const pascalCaseName = pascalCase(topic.name);
+            const pascalCaseName = topic.component || pascalCase(topic.name);
             const DynamicComponent = topicComponents[pascalCaseName];
             
             return (

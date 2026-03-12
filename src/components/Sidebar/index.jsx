@@ -66,7 +66,7 @@ const Sidebar = () => {
                 <NavLink
                   key={topic.id}
                   className={({ isActive }) => `${styles.links} ${isActive ? styles.active_link : ''}`.trim()}
-                  to={slug(topic.name)}
+                  to={`/${slug(topic.name)}`}
                   onClick={handleNavigate}
                 >
                   {topic.name}
