@@ -1,15 +1,30 @@
 .layout {
   display: flex;
-  height: calc(100vh - 60px);
+  min-height: calc(100vh - var(--header-height));
 }
 
 .sidebar {
   flex: 0 0 auto;
-  overflow-y: auto;
+  position: sticky;
+  top: var(--header-height);
+  align-self: flex-start;
+  height: calc(100vh - var(--header-height));
   background-color: #37474f;
 }
 
 .content {
-  overflow-y: auto;
   width: 100%;
+  min-width: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .layout {
+    display: block;
+  }
+
+  .sidebar {
+    position: static;
+    height: auto;
+    background-color: transparent;
+  }
 }

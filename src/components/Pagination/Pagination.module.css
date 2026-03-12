@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  gap: 16px;
   margin: 30px 0;
 }
 
@@ -10,9 +11,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 8px;
   min-width: 150px;
   min-height: 50px;
   background-color: #35474f;
+  flex: 1;
+  padding: 10px 12px;
+  border: none;
 }
 
 .button_page:disabled {
@@ -29,19 +34,25 @@
 }
 
 @media screen and (max-width: 670px) {
+  .container {
+    flex-direction: column;
+  }
+
   .button_page {
-    min-width: 100px;
+    width: 100%;
+    min-width: 0;
     min-height: 50px;
   }
 
   .topic {
     font-size: 14px;
+    text-align: center;
   }
 }
 
 @media screen and (max-width: 610px) {
   .button_page {
-    min-width: 100px;
+    min-width: 0;
     min-height: 50px;
   }
 }

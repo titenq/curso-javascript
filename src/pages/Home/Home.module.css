@@ -3,12 +3,13 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: calc(100vh - 60px);
+  min-height: calc(100vh - var(--header-height));
+  padding: 24px 16px;
 }
 
 .logo {
-  width: 256px;
-  height: 256px;
+  width: min(256px, 68vw);
+  height: auto;
   animation: scaleUp 1s ease-in-out;
   transform-origin: center;
 }
@@ -41,5 +42,13 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 22px;
+    margin-top: 8px;
+    letter-spacing: 1px;
   }
 }

@@ -1,7 +1,19 @@
 .navbar {
   background-color: #F8DC3E;
-  height: 60px;
+  min-height: var(--header-height);
   z-index: 9999;
+  padding: 0;
+}
+
+.navbar :global(.container) {
+  min-height: var(--header-height);
+}
+
+.navbar :global(.navbar-brand) {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
 }
 
 .logo_header {
@@ -15,23 +27,17 @@
   color: #263238;
   font-size: 24px;
   font-weight: 500;
-  margin-left: 50px;
   cursor: pointer;
 }
 
 @media screen and (max-width: 450px) {
-  .navbar {
-    height: 40px;
-  }
-
   .sis {
     color: #263238;
     font-size: 18px;
-    margin-left: 10px;
   }
 
   .logo_header {
-    width: 30px;
-    height: 30px;
+    width: 34px;
+    height: 34px;
   }
 }
