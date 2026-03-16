@@ -7,7 +7,11 @@ import ReactGA from 'react-ga4';
 import App from './App.jsx';
 import './index.css';
 
-ReactGA.initialize('G-FJ7RFRTS7X');
+const measurementId = import.meta.env.VITE_GA_MEASUREMENT_ID;
+
+if (measurementId) {
+  ReactGA.initialize(measurementId);
+}
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
